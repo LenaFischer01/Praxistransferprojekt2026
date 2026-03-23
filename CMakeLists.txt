@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.16)
+project(opengl_test C CXX)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(app
+  main.cpp
+  external/glad/src/glad.c
+)
+
+target_include_directories(app PRIVATE
+  external/glad/include
+)
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GLFW REQUIRED glfw3)
+
+target_include_directories(app PRIVATE ${GLFW_INCLUDE_DIRS})
+target_link_libraries(app PRIVATE ${GLFW_LIBRARIES} GL dl pthread)

@@ -1,0 +1,3 @@
+/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/app.dir
+/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/edit_cache.dir
+/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/rebuild_cache.dir

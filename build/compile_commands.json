@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -g -std=gnu++17 -o CMakeFiles/app.dir/main.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/main.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/main.cpp",
+  "output": "CMakeFiles/app.dir/main.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/gcc  -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -g -o CMakeFiles/app.dir/external/glad/src/glad.c.o -c /home/lenafischer/code/praxistransferprojekt2026/external/glad/src/glad.c",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/glad/src/glad.c",
+  "output": "CMakeFiles/app.dir/external/glad/src/glad.c.o"
+}
+]
