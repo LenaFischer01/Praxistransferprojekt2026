@@ -16,7 +16,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -31,7 +32,8 @@
 					"name" : "opengl_test",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -40,8 +42,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "app::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-app-Debug-aac9ba082f7049c769f4.json",
+					"jsonFile" : "target-app-Debug-7a07e682725aa892685a.json",
 					"name" : "app",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "copy_shaders::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-copy_shaders-Debug-1fb85294c01884dd88ff.json",
+					"name" : "copy_shaders",
 					"projectIndex" : 0
 				}
 			]

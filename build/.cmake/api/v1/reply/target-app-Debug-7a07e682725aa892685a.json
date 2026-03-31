@@ -12,6 +12,7 @@
 		[
 			"add_executable",
 			"target_link_libraries",
+			"add_dependencies",
 			"target_include_directories"
 		],
 		"files" : 
@@ -32,13 +33,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 21,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 13,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -60,7 +67,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "/home/lenafischer/code/praxistransferprojekt2026/external/glad/include"
 				}
 			],
@@ -88,7 +95,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "/home/lenafischer/code/praxistransferprojekt2026/external/glad/include"
 				}
 			],
@@ -97,6 +104,13 @@
 			[
 				1
 			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "copy_shaders::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "app::@6890427a1f51a3e7e1df",
@@ -152,6 +166,13 @@
 	],
 	"name" : "app",
 	"nameOnDisk" : "app",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "copy_shaders::@6890427a1f51a3e7e1df"
+		}
+	],
 	"paths" : 
 	{
 		"build" : ".",

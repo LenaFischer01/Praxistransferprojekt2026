@@ -129,6 +129,19 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
+#=============================================================================
+# Target rules for targets named copy_shaders
+
+# Build rule for target.
+copy_shaders: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 copy_shaders
+.PHONY : copy_shaders
+
+# fast build rule for target.
+copy_shaders/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/copy_shaders.dir/build.make CMakeFiles/copy_shaders.dir/build
+.PHONY : copy_shaders/fast
+
 external/glad/src/glad.o: external/glad/src/glad.c.o
 .PHONY : external/glad/src/glad.o
 
@@ -185,6 +198,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... copy_shaders"
 	@echo "... app"
 	@echo "... external/glad/src/glad.o"
 	@echo "... external/glad/src/glad.i"

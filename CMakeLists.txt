@@ -10,6 +10,14 @@ add_executable(app
   external/glad/src/glad.c
 )
 
+add_custom_target(copy_shaders ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/shaders
+    ${CMAKE_BINARY_DIR}/shaders
+)
+
+add_dependencies(app copy_shaders)
+
 target_include_directories(app PRIVATE
   external/glad/include
 )
