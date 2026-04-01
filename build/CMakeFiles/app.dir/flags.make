@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/g++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include
+C_INCLUDES = -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include
 
 C_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include
+CXX_INCLUDES = -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include
 
 CXX_FLAGS = -g -std=gnu++17
 

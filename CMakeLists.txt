@@ -6,7 +6,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(app
-  main.cpp
+  src/main.cpp
+  src/renderer.cpp
+  src/shader.cpp
+  src/calculatePendulum.cpp
   external/glad/src/glad.c
 )
 
@@ -19,7 +22,8 @@ add_custom_target(copy_shaders ALL
 add_dependencies(app copy_shaders)
 
 target_include_directories(app PRIVATE
-  external/glad/include
+  ${CMAKE_SOURCE_DIR}/header
+  ${CMAKE_SOURCE_DIR}/external/glad/include
 )
 
 find_package(PkgConfig REQUIRED)

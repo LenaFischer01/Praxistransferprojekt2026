@@ -2,7 +2,10 @@ app: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
-  CMakeFiles/app.dir/main.cpp.o \
+  CMakeFiles/app.dir/src/main.cpp.o \
+  CMakeFiles/app.dir/src/renderer.cpp.o \
+  CMakeFiles/app.dir/src/shader.cpp.o \
+  CMakeFiles/app.dir/src/calculatePendulum.cpp.o \
   CMakeFiles/app.dir/external/glad/src/glad.c.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libglfw.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libGL.so \
@@ -48,7 +51,13 @@ app: \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
-CMakeFiles/app.dir/main.cpp.o:
+CMakeFiles/app.dir/src/main.cpp.o:
+
+CMakeFiles/app.dir/src/renderer.cpp.o:
+
+CMakeFiles/app.dir/src/shader.cpp.o:
+
+CMakeFiles/app.dir/src/calculatePendulum.cpp.o:
 
 CMakeFiles/app.dir/external/glad/src/glad.c.o:
 

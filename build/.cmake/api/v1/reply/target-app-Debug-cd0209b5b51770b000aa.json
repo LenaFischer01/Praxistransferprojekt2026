@@ -33,19 +33,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 29,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 19,
+				"line" : 22,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 21,
+				"line" : 24,
 				"parent" : 0
 			}
 		]
@@ -68,6 +68,10 @@
 			[
 				{
 					"backtrace" : 4,
+					"path" : "/home/lenafischer/code/praxistransferprojekt2026/header"
+				},
+				{
+					"backtrace" : 4,
 					"path" : "/home/lenafischer/code/praxistransferprojekt2026/external/glad/include"
 				}
 			],
@@ -82,7 +86,10 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2,
+				3
 			]
 		},
 		{
@@ -96,13 +103,17 @@
 			[
 				{
 					"backtrace" : 4,
+					"path" : "/home/lenafischer/code/praxistransferprojekt2026/header"
+				},
+				{
+					"backtrace" : 4,
 					"path" : "/home/lenafischer/code/praxistransferprojekt2026/external/glad/include"
 				}
 			],
 			"language" : "C",
 			"sourceIndexes" : 
 			[
-				1
+				4
 			]
 		}
 	],
@@ -185,7 +196,10 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -194,7 +208,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/renderer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/calculatePendulum.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

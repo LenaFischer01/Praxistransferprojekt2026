@@ -72,24 +72,66 @@ include CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/codegen:
 .PHONY : CMakeFiles/app.dir/codegen
 
-CMakeFiles/app.dir/main.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/main.cpp
-CMakeFiles/app.dir/main.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/main.cpp.o -MF CMakeFiles/app.dir/main.cpp.o.d -o CMakeFiles/app.dir/main.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/main.cpp
+CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/src/main.cpp
+CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/src/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/main.cpp.o -MF CMakeFiles/app.dir/src/main.cpp.o.d -o CMakeFiles/app.dir/src/main.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/main.cpp
 
-CMakeFiles/app.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenafischer/code/praxistransferprojekt2026/main.cpp > CMakeFiles/app.dir/main.cpp.i
+CMakeFiles/app.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenafischer/code/praxistransferprojekt2026/src/main.cpp > CMakeFiles/app.dir/src/main.cpp.i
 
-CMakeFiles/app.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenafischer/code/praxistransferprojekt2026/main.cpp -o CMakeFiles/app.dir/main.cpp.s
+CMakeFiles/app.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenafischer/code/praxistransferprojekt2026/src/main.cpp -o CMakeFiles/app.dir/src/main.cpp.s
+
+CMakeFiles/app.dir/src/renderer.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/renderer.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp
+CMakeFiles/app.dir/src/renderer.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/renderer.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/renderer.cpp.o -MF CMakeFiles/app.dir/src/renderer.cpp.o.d -o CMakeFiles/app.dir/src/renderer.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp
+
+CMakeFiles/app.dir/src/renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/renderer.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp > CMakeFiles/app.dir/src/renderer.cpp.i
+
+CMakeFiles/app.dir/src/renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/renderer.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp -o CMakeFiles/app.dir/src/renderer.cpp.s
+
+CMakeFiles/app.dir/src/shader.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/shader.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp
+CMakeFiles/app.dir/src/shader.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/src/shader.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/shader.cpp.o -MF CMakeFiles/app.dir/src/shader.cpp.o.d -o CMakeFiles/app.dir/src/shader.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp
+
+CMakeFiles/app.dir/src/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/shader.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp > CMakeFiles/app.dir/src/shader.cpp.i
+
+CMakeFiles/app.dir/src/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/shader.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp -o CMakeFiles/app.dir/src/shader.cpp.s
+
+CMakeFiles/app.dir/src/calculatePendulum.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/calculatePendulum.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp
+CMakeFiles/app.dir/src/calculatePendulum.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/app.dir/src/calculatePendulum.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/calculatePendulum.cpp.o -MF CMakeFiles/app.dir/src/calculatePendulum.cpp.o.d -o CMakeFiles/app.dir/src/calculatePendulum.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp
+
+CMakeFiles/app.dir/src/calculatePendulum.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/calculatePendulum.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp > CMakeFiles/app.dir/src/calculatePendulum.cpp.i
+
+CMakeFiles/app.dir/src/calculatePendulum.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/calculatePendulum.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp -o CMakeFiles/app.dir/src/calculatePendulum.cpp.s
 
 CMakeFiles/app.dir/external/glad/src/glad.c.o: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/external/glad/src/glad.c.o: /home/lenafischer/code/praxistransferprojekt2026/external/glad/src/glad.c
 CMakeFiles/app.dir/external/glad/src/glad.c.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/app.dir/external/glad/src/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/app.dir/external/glad/src/glad.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/external/glad/src/glad.c.o -MF CMakeFiles/app.dir/external/glad/src/glad.c.o.d -o CMakeFiles/app.dir/external/glad/src/glad.c.o -c /home/lenafischer/code/praxistransferprojekt2026/external/glad/src/glad.c
 
 CMakeFiles/app.dir/external/glad/src/glad.c.i: cmake_force
@@ -102,18 +144,24 @@ CMakeFiles/app.dir/external/glad/src/glad.c.s: cmake_force
 
 # Object files for target app
 app_OBJECTS = \
-"CMakeFiles/app.dir/main.cpp.o" \
+"CMakeFiles/app.dir/src/main.cpp.o" \
+"CMakeFiles/app.dir/src/renderer.cpp.o" \
+"CMakeFiles/app.dir/src/shader.cpp.o" \
+"CMakeFiles/app.dir/src/calculatePendulum.cpp.o" \
 "CMakeFiles/app.dir/external/glad/src/glad.c.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
-app: CMakeFiles/app.dir/main.cpp.o
+app: CMakeFiles/app.dir/src/main.cpp.o
+app: CMakeFiles/app.dir/src/renderer.cpp.o
+app: CMakeFiles/app.dir/src/shader.cpp.o
+app: CMakeFiles/app.dir/src/calculatePendulum.cpp.o
 app: CMakeFiles/app.dir/external/glad/src/glad.c.o
 app: CMakeFiles/app.dir/build.make
 app: CMakeFiles/app.dir/compiler_depend.ts
 app: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,5 +1,5 @@
-CMakeFiles/app.dir/main.cpp.o: \
- /home/lenafischer/code/praxistransferprojekt2026/main.cpp \
+CMakeFiles/app.dir/src/main.cpp.o: \
+ /home/lenafischer/code/praxistransferprojekt2026/src/main.cpp \
  /usr/include/stdc-predef.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/glad/glad.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/KHR/khrplatform.h \
@@ -182,12 +182,14 @@ CMakeFiles/app.dir/main.cpp.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/lenafischer/code/praxistransferprojekt2026/shader.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/shader.h \
  /usr/include/c++/13/fstream /usr/include/c++/13/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/sstream \
  /usr/include/c++/13/bits/sstream.tcc \
- /home/lenafischer/code/praxistransferprojekt2026/calculatePendulum.h \
- /home/lenafischer/code/praxistransferprojekt2026/config.h \
- /home/lenafischer/code/praxistransferprojekt2026/renderer.h
+ /home/lenafischer/code/praxistransferprojekt2026/header/calculatePendulum.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/renderer.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/shader.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/config.h

@@ -42,14 +42,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "app::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-app-Debug-7a07e682725aa892685a.json",
+					"jsonFile" : "target-app-Debug-cd0209b5b51770b000aa.json",
 					"name" : "app",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "copy_shaders::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-copy_shaders-Debug-1fb85294c01884dd88ff.json",
+					"jsonFile" : "target-copy_shaders-Debug-905939b72bbe7699c68b.json",
 					"name" : "copy_shaders",
 					"projectIndex" : 0
 				}
