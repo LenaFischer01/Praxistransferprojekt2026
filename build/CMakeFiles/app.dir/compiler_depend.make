@@ -71,6 +71,7 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o: /home/lenafischer/code/praxistran
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/app.dir/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/main.cpp \
+  /home/lenafischer/code/praxistransferprojekt2026/calculatePendulum.h \
   /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/KHR/khrplatform.h \
   /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/glad/glad.h \
   /home/lenafischer/code/praxistransferprojekt2026/shader.h \
@@ -125,12 +126,15 @@ CMakeFiles/app.dir/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/streambuf.tcc \
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
@@ -138,6 +142,7 @@ CMakeFiles/app.dir/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
@@ -186,6 +191,7 @@ CMakeFiles/app.dir/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -331,7 +337,15 @@ CMakeFiles/app.dir/main.cpp.o:
 
 CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
+/usr/lib/x86_64-linux-gnu/libc_nonshared.a:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
+
 /usr/lib/x86_64-linux-gnu/Scrt1.o:
+
+/home/lenafischer/code/praxistransferprojekt2026/calculatePendulum.h:
 
 /usr/include/c++/13/bits/stl_algobase.h:
 
@@ -365,8 +379,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
-/usr/include/c++/13/bits/new_allocator.h:
-
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/c++/13/bits/uses_allocator_args.h:
@@ -399,10 +411,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/include/c++/13/bits/localefwd.h:
 
-/usr/include/c++/13/cstdio:
-
-/usr/include/c++/13/fstream:
-
 /usr/include/c++/13/bits/exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
@@ -425,9 +433,15 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/include/c++/13/bits/allocator.h:
 
+/usr/include/c++/13/bits/stl_bvector.h:
+
 /usr/include/c++/13/bits/alloc_traits.h:
 
 /usr/include/c++/13/bits/concept_check.h:
+
+/usr/include/c++/13/cstdio:
+
+/usr/include/c++/13/fstream:
 
 /usr/include/c++/13/bit:
 
@@ -470,8 +484,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/c++/13/backward/binders.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
@@ -559,10 +571,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/include/features-time64.h:
 
-/usr/include/endian.h:
-
-/usr/include/stdint.h:
-
 /usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/c++/13/bits/locale_classes.h:
@@ -571,15 +579,19 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
-/usr/include/c++/13/bits/streambuf.tcc:
-
-/usr/include/c++/13/bits/specfun.h:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/13/tr1/special_function_util.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/stdint.h:
+
+/usr/include/endian.h:
+
+/usr/include/c++/13/bits/specfun.h:
+
+/usr/include/c++/13/bits/streambuf.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -643,6 +655,12 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
 
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/GLFW/glfw3.h:
@@ -658,6 +676,8 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/c++/13/bits/string_view.tcc:
 
 /usr/include/c++/13/bits/stringfwd.h:
+
+/usr/include/c++/13/bits/vector.tcc:
 
 /home/lenafischer/code/praxistransferprojekt2026/main.cpp:
 
@@ -728,6 +748,12 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/13/tr1/legendre_function.tcc:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o:
+
+/usr/include/c++/13/tr1/poly_hermite.tcc:
+
+/usr/include/c++/13/vector:
 
 /usr/include/ctype.h:
 
@@ -817,13 +843,11 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /lib/x86_64-linux-gnu/libmvec.so.1:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
-
 /lib/x86_64-linux-gnu/libxcb.so.1:
 
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/lib/x86_64-linux-gnu/crtn.o:
 
@@ -838,9 +862,3 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/lib/x86_64-linux-gnu/libdl.a:
 
 /usr/lib/x86_64-linux-gnu/libm.so:
-
-/usr/include/c++/13/tr1/poly_hermite.tcc:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o:
-
-/usr/lib/x86_64-linux-gnu/libc_nonshared.a:
