@@ -176,6 +176,7 @@ CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2
   /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/renderer.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/shader.h \
+  /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -895,9 +896,7 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/lib/x86_64-linux-gnu/libdl.a:
 
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
-
-/usr/include/asm-generic/errno-base.h:
+/usr/lib/x86_64-linux-gnu/libc.so:
 
 /home/lenafischer/code/praxistransferprojekt2026/header/shader.h:
 
@@ -967,7 +966,13 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/lib/x86_64-linux-gnu/Scrt1.o:
 
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
 /usr/include/c++/13/bits/stl_algobase.h:
+
+/usr/include/c++/13/vector:
 
 /usr/include/c++/13/bits/predefined_ops.h:
 
@@ -1185,6 +1190,8 @@ CMakeFiles/app.dir/src/main.cpp.o:
 
 /usr/include/c++/13/ext/numeric_traits.h:
 
+/home/lenafischer/code/praxistransferprojekt2026/header/ui.h:
+
 /usr/include/c++/13/bits/stl_iterator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
@@ -1329,8 +1336,6 @@ CMakeFiles/app.dir/src/main.cpp.o:
 
 /usr/include/c++/13/string:
 
-/usr/include/c++/13/vector:
-
 /usr/include/ctype.h:
 
 /usr/include/c++/13/debug/debug.h:
@@ -1414,5 +1419,3 @@ CMakeFiles/app.dir/src/main.cpp.o:
 /usr/include/c++/13/cstddef:
 
 /usr/lib/x86_64-linux-gnu/libGL.so:
-
-/usr/lib/x86_64-linux-gnu/libc.so:

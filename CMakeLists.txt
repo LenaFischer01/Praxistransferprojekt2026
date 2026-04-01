@@ -21,9 +21,24 @@ add_custom_target(copy_shaders ALL
 
 add_dependencies(app copy_shaders)
 
+add_library(imgui STATIC
+  external/imgui/src/imgui.cpp
+  external/imgui/src/imgui_draw.cpp
+  external/imgui/src/imgui_tables.cpp
+  external/imgui/src/imgui_widgets.cpp
+  external/imgui/src/imgui_tables.cpp
+  external/imgui/src/backends/imgui_impl_glfw.cpp
+  external/imgui/src/backends/imgui_impl_opengl3.cpp
+)
+
 target_include_directories(app PRIVATE
   ${CMAKE_SOURCE_DIR}/header
   ${CMAKE_SOURCE_DIR}/external/glad/include
+)
+target_include_directories(imgui PUBLIC
+  ${CMAKE_SOURCE_DIR}/external/imgui/include
+  ${CMAKE_SOURCE_DIR}/external/imgui/include/backends
+  ${GLFW_INCLUDE_DIRS}
 )
 
 find_package(PkgConfig REQUIRED)

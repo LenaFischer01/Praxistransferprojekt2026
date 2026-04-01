@@ -8,6 +8,7 @@
 #include "calculatePendulum.h"
 #include "config.h"
 #include "renderer.h"
+#include "ui.h"
 
 using namespace std;
 
@@ -43,6 +44,7 @@ int main() {
 
     Shader customShader(Config::VERTEX_SHADER, Config::FRAGMENT_SHADER);
     Renderer renderer(customShader);
+    UI ui(window);
 
     // ------------------------------------------------------------
     // Pendel initialisieren und Kreise vorbereiten
@@ -61,6 +63,12 @@ int main() {
     // ------------------------------------------------------------
     while (!glfwWindowShouldClose(window))
     {
+        glfwPollEvents();
+        processInput(window);
+
+        ui.startFrame();
+        ui.defineStyleAndUi();
+
         // Pendel simulieren
         timeStepRK4(joint1, joint2, Config::DT, Config::G);
 
@@ -74,15 +82,14 @@ int main() {
 
         renderer.update(fx1, fy1, fx2, fy2);
 
-        processInput(window);
-
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         renderer.draw(scale);
 
+        ui.render();
+
         glfwSwapBuffers(window);
-        glfwPollEvents();
     }
 
     glfwTerminate();

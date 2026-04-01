@@ -28,5 +28,41 @@
   "command": "/usr/bin/gcc  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -g -o CMakeFiles/app.dir/external/glad/src/glad.c.o -c /home/lenafischer/code/praxistransferprojekt2026/external/glad/src/glad.c",
   "file": "/home/lenafischer/code/praxistransferprojekt2026/external/glad/src/glad.c",
   "output": "CMakeFiles/app.dir/external/glad/src/glad.c.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/imgui.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui.cpp",
+  "output": "CMakeFiles/imgui.dir/external/imgui/src/imgui.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/imgui_draw.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_draw.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_draw.cpp",
+  "output": "CMakeFiles/imgui.dir/external/imgui/src/imgui_draw.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/imgui_tables.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_tables.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_tables.cpp",
+  "output": "CMakeFiles/imgui.dir/external/imgui/src/imgui_tables.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/imgui_widgets.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_widgets.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_widgets.cpp",
+  "output": "CMakeFiles/imgui.dir/external/imgui/src/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_glfw.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_glfw.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_opengl3.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_opengl3.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_opengl3.cpp.o"
 }
 ]
