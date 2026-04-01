@@ -48,15 +48,13 @@ int main() {
     // Pendel initialisieren und Kreise vorbereiten
     // ------------------------------------------------------------
 
-    double theta1 = 100 * M_PI / 180.0;
+    double theta1 = 100 * M_PI / 180.0; // TODO: über UI initialisieren 
     double theta2 = -80 * M_PI / 180.0;
 
     Pendulumjoint joint1 = {1.0, 1.0, theta1, 0.0};
     Pendulumjoint joint2 = {1.0, 1.0, theta2, 0.0};
 
     float scale = 0.75f / (joint1.length + joint2.length);
-
-    float vertices[4 * 6];
 
     // ------------------------------------------------------------
     // Main Loop

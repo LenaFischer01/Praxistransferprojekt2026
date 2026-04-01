@@ -9,8 +9,10 @@ namespace Config {
     constexpr double DT = 0.001;
     constexpr double G = 9.81;
 
-    constexpr float CIRCLE_RADIUS = 0.05f;
+    constexpr float CIRCLE_RADIUS = 0.07f;
     constexpr int CIRCLE_SEGMENTS = 64;
+    constexpr int TRACE_POINTS = 1000;
+    constexpr float LINE_WIDTH = 2.5f;
 
     constexpr const char* VERTEX_SHADER = "shaders/3.3.shader.vs";
     constexpr const char* FRAGMENT_SHADER = "shaders/3.3.shader.fs";

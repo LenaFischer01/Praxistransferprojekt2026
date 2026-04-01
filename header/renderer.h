@@ -33,11 +33,17 @@ private:
     int vertsPerCircle_ = 0;
     std::vector<float> circles_; // 3 circles * vertsPerCircle * 3 floats
 
+    // Spur
+    unsigned int traceVAO_ = 0, traceVBO_ = 0;
+    std::vector<float> traceVerts_; // maxTracePoints * 3 floats
+    int tracePointCount_ = 0;
+
 private:
     void initLineBuffers();
     void initCircleBuffers();
-
+    void initTraceBuffers();
     void fillDisk(int circleIndex, float cx, float cy);
+    void addTracePoint(float x, float y);
 };
 
 #endif
