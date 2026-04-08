@@ -144,12 +144,12 @@ void Renderer::draw(float scale, bool showTrace) {
     glLineWidth(Config::LINE_WIDTH);          
 
     // Lines
-    shader_.setVec4("uColor", 0.8f, 0.2f, 0.6f, 1.0f);
+    shader_.setVec4("uColor", 0.415686f, 0.050980f, 0.513726f, 1.0f);
     glBindVertexArray(lineVAO_);
     glDrawArrays(GL_LINES, 0, 4);
 
     // Circles
-    shader_.setVec4("uColor", 1.0f, 0.2f, 0.2f, 1.0f);
+    shader_.setVec4("uColor", 0.933333f, 0.364706f, 0.423529f, 1.0f);
     glBindVertexArray(circleVAO_);
     glDrawArrays(GL_TRIANGLE_FAN, 0 * vertsPerCircle_, vertsPerCircle_);
     glDrawArrays(GL_TRIANGLE_FAN, 1 * vertsPerCircle_, vertsPerCircle_);
@@ -157,7 +157,7 @@ void Renderer::draw(float scale, bool showTrace) {
 
     // Trace
     if (showTrace) {
-        shader_.setVec4("uColor", 1.0f, 0.0f, 0.0f, 1.0f);
+        shader_.setVec4("uColor", 0.933333f, 0.686275f, 0.380392f, 1.0f);
         glBindVertexArray(traceVAO_);
         glDrawArrays(GL_LINE_STRIP, 0, tracePointCount_);
     }
