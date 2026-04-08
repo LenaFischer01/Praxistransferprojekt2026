@@ -10,8 +10,22 @@ public:
     void defineStyleAndUi();
     void render();
 
-    float exposure = 1.0f;
-    bool  useToneMapping = true; // TODO: Verändern und echte einbauen
+    struct parameters {
+        bool  showTrace = true; 
+        float length1 = 1.0f;
+        float length2 = 1.0f;
+        float mass1 = 1.0f;
+        float mass2 = 1.0f;
+        float gravity = 9.81f;
+        float angle1 = 0.0f;
+        float angle2 = 0.0f;
+
+        bool run = false;
+    } params;
+
+    parameters& getParams() { return params; }
+
+    void resetParameters() { params = parameters(); }
 
 private:
     GLFWwindow* window_ = nullptr;

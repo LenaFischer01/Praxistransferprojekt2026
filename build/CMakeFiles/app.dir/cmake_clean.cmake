@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/app.dir/src/renderer.cpp.o.d"
   "CMakeFiles/app.dir/src/shader.cpp.o"
   "CMakeFiles/app.dir/src/shader.cpp.o.d"
+  "CMakeFiles/app.dir/src/ui.cpp.o"
+  "CMakeFiles/app.dir/src/ui.cpp.o.d"
   "app"
   "app.pdb"
 )

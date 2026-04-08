@@ -1,4 +1,5 @@
 #include "renderer.h"
+#include "ui.h"
 
 Renderer::Renderer(const Shader& shader)
     : shader_(shader)
@@ -126,7 +127,7 @@ void Renderer::update(float x1, float y1, float x2, float y2) {
     glBufferSubData(GL_ARRAY_BUFFER, 0, tracePointCount_ * 3 * sizeof(float), traceVerts_.data());
 }
 
-void Renderer::draw(float scale) {
+void Renderer::draw(float scale, bool showTrace) {
     shader_.use();
     shader_.setFloat("scale", scale);
     shader_.setVec2("offset", 0.0f, 0.0f);
@@ -146,9 +147,11 @@ void Renderer::draw(float scale) {
     glDrawArrays(GL_TRIANGLE_FAN, 2 * vertsPerCircle_, vertsPerCircle_);
 
     // Trace
-    shader_.setVec4("uColor", 1.0f, 0.0f, 0.0f, 1.0f);
-    glBindVertexArray(traceVAO_);
-    glDrawArrays(GL_LINE_STRIP, 0, tracePointCount_);
+    if (showTrace) {
+        shader_.setVec4("uColor", 1.0f, 0.0f, 0.0f, 1.0f);
+        glBindVertexArray(traceVAO_);
+        glDrawArrays(GL_LINE_STRIP, 0, tracePointCount_);
+    }
 
     glBindVertexArray(0);
 }

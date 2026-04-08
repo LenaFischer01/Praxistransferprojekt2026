@@ -10,6 +10,7 @@ add_executable(app
   src/renderer.cpp
   src/shader.cpp
   src/calculatePendulum.cpp
+  src/ui.cpp
   external/glad/src/glad.c
 )
 
@@ -31,6 +32,9 @@ add_library(imgui STATIC
   external/imgui/src/backends/imgui_impl_opengl3.cpp
 )
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GLFW REQUIRED glfw3)
+
 target_include_directories(app PRIVATE
   ${CMAKE_SOURCE_DIR}/header
   ${CMAKE_SOURCE_DIR}/external/glad/include
@@ -41,8 +45,5 @@ target_include_directories(imgui PUBLIC
   ${GLFW_INCLUDE_DIRS}
 )
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(GLFW REQUIRED glfw3)
-
 target_include_directories(app PRIVATE ${GLFW_INCLUDE_DIRS})
-target_link_libraries(app PRIVATE ${GLFW_LIBRARIES} GL dl pthread)
+target_link_libraries(app PRIVATE ${GLFW_LIBRARIES} GL dl pthread imgui)

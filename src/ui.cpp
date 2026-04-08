@@ -11,9 +11,6 @@ void UI::InitImGui(GLFWwindow* window) {
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
-    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
-    io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
 
     ImGui::StyleColorsDark();
 
@@ -28,9 +25,36 @@ void UI::startFrame() {
 }
 
 void UI::defineStyleAndUi() {
-    ImGui::Begin("Settings");
-    ImGui::Checkbox("Tone mapping", &useToneMapping);
-    ImGui::SliderFloat("Exposure", &exposure, 0.1f, 5.0f);
+    ImGui::Begin("Settings", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+    ImGui::Checkbox("Spur", &params.showTrace);
+    ImGui::SliderFloat("Länge 1", &params.length1, 0.1f, 5.0f);
+    ImGui::SliderFloat("Länge 2", &params.length2, 0.1f, 5.0f);
+
+    ImGui::SliderFloat("Masse 1", &params.mass1, 0.1f, 10.0f);
+    ImGui::SliderFloat("Masse 2", &params.mass2, 0.1f, 10.0f);
+
+    ImGui::SliderFloat("Gravitation", &params.gravity, 0.0f, 20.0f);
+
+    if (ImGui::SliderFloat("Startwinkel 1", &params.angle1, -180.0f, 180.0f)) {
+        params.run = false;
+    }
+    if (ImGui::SliderFloat("Startwinkel 2", &params.angle2, -180.0f, 180.0f)) {
+        params.run = false;
+    }
+
+    if (ImGui::Button("Start simulation")) {
+        params.run = true;
+    }
+    ImGui::SameLine();
+
+    if (ImGui::Button("Stop simulation")) {
+        params.run = false;
+    }
+    ImGui::SameLine();
+    if (ImGui::Button("Reset simulation")) {
+        resetParameters();
+    }
+
     ImGui::End();
 }
 
@@ -38,14 +62,6 @@ void UI::render() {
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-    // Wichtig bei Viewports:
-    ImGuiIO& io = ImGui::GetIO();
-    if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable) {
-        GLFWwindow* backup = glfwGetCurrentContext();
-        ImGui::UpdatePlatformWindows();
-        ImGui::RenderPlatformWindowsDefault();
-        glfwMakeContextCurrent(backup);
-    }
 }
 
 UI::~UI() {

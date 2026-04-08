@@ -188,4 +188,6 @@ CMakeFiles/app.dir/src/renderer.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/sstream \
  /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/iostream \
- /home/lenafischer/code/praxistransferprojekt2026/header/config.h
+ /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
+ /usr/include/GLFW/glfw3.h

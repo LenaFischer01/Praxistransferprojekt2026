@@ -19,7 +19,9 @@ public:
     // Update GPU-Daten
     void update(float x1, float y1, float x2, float y2);
 
-    void draw(float scale);
+    void draw(float scale, bool showTrace);
+
+    void clearTrace() { tracePointCount_ = 0; }
 
 private:
     Shader shader_;

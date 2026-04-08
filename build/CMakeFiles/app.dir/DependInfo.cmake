@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lenafischer/code/praxistransferprojekt2026/src/main.cpp" "CMakeFiles/app.dir/src/main.cpp.o" "gcc" "CMakeFiles/app.dir/src/main.cpp.o.d"
   "/home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp" "CMakeFiles/app.dir/src/renderer.cpp.o" "gcc" "CMakeFiles/app.dir/src/renderer.cpp.o.d"
   "/home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp" "CMakeFiles/app.dir/src/shader.cpp.o" "gcc" "CMakeFiles/app.dir/src/shader.cpp.o.d"
+  "/home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp" "CMakeFiles/app.dir/src/ui.cpp.o" "gcc" "CMakeFiles/app.dir/src/ui.cpp.o.d"
   "" "app" "gcc" "CMakeFiles/app.dir/link.d"
   )
 

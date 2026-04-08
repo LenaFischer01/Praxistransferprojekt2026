@@ -15,6 +15,7 @@ using namespace std;
 // ----------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
+void getAndUpdatePendulumParameters(Pendulumjoint &joint1, Pendulumjoint &joint2, UI::parameters& params);
 
 int main() {
 
@@ -50,13 +51,20 @@ int main() {
     // Pendel initialisieren und Kreise vorbereiten
     // ------------------------------------------------------------
 
-    double theta1 = 100 * M_PI / 180.0; // TODO: über UI initialisieren 
-    double theta2 = -80 * M_PI / 180.0;
+    // double theta1 = 100 * M_PI / 180.0; // TODO: über UI initialisieren 
+    // double theta2 = -80 * M_PI / 180.0;
 
-    Pendulumjoint joint1 = {1.0, 1.0, theta1, 0.0};
-    Pendulumjoint joint2 = {1.0, 1.0, theta2, 0.0};
+    // Pendulumjoint joint1 = {1.0, 1.0, theta1, 0.0};
+    // Pendulumjoint joint2 = {1.0, 1.0, theta2, 0.0};
+
+    // float scale = 0.75f / (joint1.length + joint2.length);
+
+    Pendulumjoint joint1 = {1.0, 1.0, 0.0, 0.0};
+    Pendulumjoint joint2 = {1.0, 1.0, 0.0, 0.0};
 
     float scale = 0.75f / (joint1.length + joint2.length);
+
+    getAndUpdatePendulumParameters(joint1, joint2, ui.getParams());
 
     // ------------------------------------------------------------
     // Main Loop
@@ -69,8 +77,27 @@ int main() {
         ui.startFrame();
         ui.defineStyleAndUi();
 
+        // Get current parameters from UI
+        UI::parameters& params = ui.getParams();
+        getAndUpdatePendulumParameters(joint1, joint2, params);
+
+
+        if (!params.run) {
+            // Restart simulation
+            joint1.theta = params.angle1 * M_PI / 180.0;
+            joint2.theta = params.angle2 * M_PI / 180.0;
+            joint1.omega = 0.0;
+            joint2.omega = 0.0;
+
+            scale = 0.75f / (joint1.length + joint2.length);
+
+            renderer.clearTrace(); 
+        }
+
         // Pendel simulieren
-        timeStepRK4(joint1, joint2, Config::DT, Config::G);
+        if (params.run) {
+            timeStepRK4(joint1, joint2, Config::DT, params.gravity);
+        }
 
         double x1, y1, x2, y2;
         getKartesianCoordinates(joint1, joint2, x1, y1, x2, y2);
@@ -85,7 +112,7 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        renderer.draw(scale);
+        renderer.draw(scale, params.showTrace);
 
         ui.render();
 
@@ -105,4 +132,12 @@ void processInput(GLFWwindow *window)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+}
+
+void getAndUpdatePendulumParameters(Pendulumjoint &joint1, Pendulumjoint &joint2, UI::parameters& params) {
+    joint1.length = params.length1;
+    joint1.mass = params.mass1;
+
+    joint2.length = params.length2;
+    joint2.mass = params.mass2;
 }

@@ -6,11 +6,13 @@ app: \
   CMakeFiles/app.dir/src/renderer.cpp.o \
   CMakeFiles/app.dir/src/shader.cpp.o \
   CMakeFiles/app.dir/src/calculatePendulum.cpp.o \
+  CMakeFiles/app.dir/src/ui.cpp.o \
   CMakeFiles/app.dir/external/glad/src/glad.c.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libglfw.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libGL.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libdl.a \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libpthread.a \
+  libimgui.a \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
@@ -59,6 +61,8 @@ CMakeFiles/app.dir/src/shader.cpp.o:
 
 CMakeFiles/app.dir/src/calculatePendulum.cpp.o:
 
+CMakeFiles/app.dir/src/ui.cpp.o:
+
 CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libglfw.so:
@@ -68,6 +72,8 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libdl.a:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libpthread.a:
+
+libimgui.a:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so:
 

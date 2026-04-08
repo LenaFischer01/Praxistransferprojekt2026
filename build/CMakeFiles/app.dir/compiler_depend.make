@@ -411,6 +411,8 @@ CMakeFiles/app.dir/src/renderer.cpp.o: /home/lenafischer/code/praxistransferproj
   /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/renderer.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/shader.h \
+  /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
+  /usr/include/GLFW/glfw3.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -839,6 +841,44 @@ CMakeFiles/app.dir/src/shader.cpp.o: /home/lenafischer/code/praxistransferprojek
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
+CMakeFiles/app.dir/src/ui.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp \
+  /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/KHR/khrplatform.h \
+  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_glfw.h \
+  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_opengl3.h \
+  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imconfig.h \
+  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imgui.h \
+  /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glext.h \
+  /usr/include/GLFW/glfw3.h \
+  /usr/include/assert.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+
 app: /lib/x86_64-linux-gnu/libX11.so.6 \
   /lib/x86_64-linux-gnu/libXau.so.6 \
   /lib/x86_64-linux-gnu/libXdmcp.so.6 \
@@ -869,7 +909,9 @@ app: /lib/x86_64-linux-gnu/libX11.so.6 \
   CMakeFiles/app.dir/src/calculatePendulum.cpp.o \
   CMakeFiles/app.dir/src/main.cpp.o \
   CMakeFiles/app.dir/src/renderer.cpp.o \
-  CMakeFiles/app.dir/src/shader.cpp.o
+  CMakeFiles/app.dir/src/shader.cpp.o \
+  CMakeFiles/app.dir/src/ui.cpp.o \
+  libimgui.a
 
 
 CMakeFiles/app.dir/src/shader.cpp.o:
@@ -897,6 +939,18 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/lib/x86_64-linux-gnu/libdl.a:
 
 /usr/lib/x86_64-linux-gnu/libc.so:
+
+/usr/lib/x86_64-linux-gnu/crti.o:
+
+/usr/lib/x86_64-linux-gnu/Scrt1.o:
+
+/lib64/ld-linux-x86-64.so.2:
+
+/lib/x86_64-linux-gnu/libxcb.so.1:
+
+/lib/x86_64-linux-gnu/libmd.so.0:
+
+/lib/x86_64-linux-gnu/libm.so.6:
 
 /home/lenafischer/code/praxistransferprojekt2026/header/shader.h:
 
@@ -964,8 +1018,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /usr/include/c++/13/fstream:
 
-/usr/lib/x86_64-linux-gnu/Scrt1.o:
-
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
@@ -983,8 +1035,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/c++/13/bits/basic_string.tcc:
 
 /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp:
-
-/lib/x86_64-linux-gnu/libxcb.so.1:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
@@ -1036,9 +1086,13 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
+CMakeFiles/app.dir/src/ui.cpp.o:
+
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/13/tr1/poly_laguerre.tcc:
+
+/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imgui.h:
 
 /usr/include/c++/13/bits/basic_string.h:
 
@@ -1074,8 +1128,6 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 
 /usr/include/c++/13/tr1/gamma.tcc:
 
-/usr/include/c++/13/cctype:
-
 /usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
@@ -1089,8 +1141,6 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/c++/13/istream:
-
-/usr/lib/x86_64-linux-gnu/crti.o:
 
 /usr/include/c++/13/ext/type_traits.h:
 
@@ -1110,6 +1160,10 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 
 /usr/include/dlfcn.h:
 
+/lib/x86_64-linux-gnu/libmvec.so.1:
+
+/usr/include/stdlib.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
@@ -1122,6 +1176,10 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 
 /usr/include/GLFW/glfw3.h:
 
+/usr/include/c++/13/cctype:
+
+/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_opengl3.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
@@ -1129,10 +1187,6 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 /usr/include/c++/13/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/c++/13/bits/requires_hosted.h:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
@@ -1222,17 +1276,27 @@ CMakeFiles/app.dir/src/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
+/usr/lib/x86_64-linux-gnu/libGL.so:
+
+/usr/include/c++/13/cstddef:
+
+/usr/include/GL/glext.h:
+
 /usr/include/c++/13/bits/utility.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/include/locale.h:
+libimgui.a:
 
-/lib/x86_64-linux-gnu/libmd.so.0:
+/usr/include/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/lib64/ld-linux-x86-64.so.2:
+/usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a:
+
+/usr/lib/x86_64-linux-gnu/crtn.o:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/c++/13/backward/binders.h:
 
@@ -1240,9 +1304,17 @@ CMakeFiles/app.dir/src/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
 
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/c++/13/bits/requires_hosted.h:
+
+/usr/include/GL/gl.h:
+
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_glfw.h:
 
 /usr/include/c++/13/bits/exception_ptr.h:
 
@@ -1336,6 +1408,8 @@ CMakeFiles/app.dir/src/main.cpp.o:
 
 /usr/include/c++/13/string:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
+
 /usr/include/ctype.h:
 
 /usr/include/c++/13/debug/debug.h:
@@ -1357,6 +1431,8 @@ CMakeFiles/app.dir/src/main.cpp.o:
 /lib/x86_64-linux-gnu/libc.so.6:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
+
+/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imconfig.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
@@ -1398,24 +1474,12 @@ CMakeFiles/app.dir/src/main.cpp.o:
 
 /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp:
 
+/home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp:
+
+/usr/include/assert.h:
+
 /usr/include/c++/13/exception:
 
 /lib/x86_64-linux-gnu/libXdmcp.so.6:
 
 /lib/x86_64-linux-gnu/libbsd.so.0:
-
-/lib/x86_64-linux-gnu/libm.so.6:
-
-/usr/include/stdlib.h:
-
-/lib/x86_64-linux-gnu/libmvec.so.1:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/lib/x86_64-linux-gnu/crtn.o:
-
-/usr/include/c++/13/cstddef:
-
-/usr/lib/x86_64-linux-gnu/libGL.so:
