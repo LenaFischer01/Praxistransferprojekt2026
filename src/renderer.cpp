@@ -74,10 +74,19 @@ void Renderer::fillDisk(int circleIndex, float cx, float cy) {
     circles_[startFloat + 2] = 0.0f;
 
     // Ring
+    // Multiplier1 for circle 1, Multiplier2 for circle 2
+    float multiplier = 0.0f;
     for (int i = 0; i <= Config::CIRCLE_SEGMENTS; ++i) {
+            if (circleIndex == 1) {
+                multiplier = circleMultiplier1_;
+            } else if (circleIndex == 2) {
+                multiplier = circleMultiplier2_;
+            } else {
+                multiplier = 1.0f; // Default for the first circle
+            }
         float a = 2.0f * (float)M_PI * (float)i / (float)Config::CIRCLE_SEGMENTS;
-        circles_[startFloat + 3 * (1 + i) + 0] = cx + Config::CIRCLE_RADIUS * std::cos(a);
-        circles_[startFloat + 3 * (1 + i) + 1] = cy + Config::CIRCLE_RADIUS * std::sin(a);
+        circles_[startFloat + 3 * (1 + i) + 0] = cx + Config::CIRCLE_RADIUS * std::cos(a) * multiplier;
+        circles_[startFloat + 3 * (1 + i) + 1] = cy + Config::CIRCLE_RADIUS * std::sin(a) * multiplier;
         circles_[startFloat + 3 * (1 + i) + 2] = 0.0f;
     }
 }

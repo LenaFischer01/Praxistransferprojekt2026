@@ -23,6 +23,8 @@ public:
 
     void clearTrace() { tracePointCount_ = 0; }
 
+    void setCircleMultiplier(float multiplier1, float multiplier2) { circleMultiplier1_ = multiplier1; circleMultiplier2_ = multiplier2; }
+
 private:
     Shader shader_;
 
@@ -34,6 +36,9 @@ private:
     unsigned int circleVAO_ = 0, circleVBO_ = 0;
     int vertsPerCircle_ = 0;
     std::vector<float> circles_; // 3 circles * vertsPerCircle * 3 floats
+    float circleMultiplier1_ = 1.00f; 
+    float circleMultiplier2_ = 1.00f; 
+
 
     // Spur
     unsigned int traceVAO_ = 0, traceVBO_ = 0;

@@ -51,14 +51,6 @@ int main() {
     // Pendel initialisieren und Kreise vorbereiten
     // ------------------------------------------------------------
 
-    // double theta1 = 100 * M_PI / 180.0; // TODO: über UI initialisieren 
-    // double theta2 = -80 * M_PI / 180.0;
-
-    // Pendulumjoint joint1 = {1.0, 1.0, theta1, 0.0};
-    // Pendulumjoint joint2 = {1.0, 1.0, theta2, 0.0};
-
-    // float scale = 0.75f / (joint1.length + joint2.length);
-
     Pendulumjoint joint1 = {1.0, 1.0, 0.0, 0.0};
     Pendulumjoint joint2 = {1.0, 1.0, 0.0, 0.0};
 
@@ -80,6 +72,8 @@ int main() {
         // Get current parameters from UI
         UI::parameters& params = ui.getParams();
         getAndUpdatePendulumParameters(joint1, joint2, params);
+        scale = 0.75f / (joint1.length + joint2.length);
+        renderer.setCircleMultiplier(params.mass1 * 0.5f, params.mass2 * 0.5f);
 
 
         if (!params.run) {
@@ -88,8 +82,6 @@ int main() {
             joint2.theta = params.angle2 * M_PI / 180.0;
             joint1.omega = 0.0;
             joint2.omega = 0.0;
-
-            scale = 0.75f / (joint1.length + joint2.length);
 
             renderer.clearTrace(); 
         }
