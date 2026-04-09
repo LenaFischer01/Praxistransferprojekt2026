@@ -120,7 +120,7 @@ void timeStepLeapfrog(Pendulumjoint& j1, Pendulumjoint& j2, double dt, double g)
 }
 
 void getKartesianCoordinates(const Pendulumjoint& joint1, const Pendulumjoint& joint2,
-                             double& x1, double& y1, double& x2, double& y2) {
+                             float& x1, float& y1, float& x2, float& y2) {
     x1 = joint1.length * std::sin(joint1.theta);
     y1 = -joint1.length * std::cos(joint1.theta);
     x2 = x1 + joint2.length * std::sin(joint2.theta);

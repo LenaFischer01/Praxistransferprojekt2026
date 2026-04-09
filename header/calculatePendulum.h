@@ -24,6 +24,6 @@ void timeStepRK4(Pendulumjoint& joint1, Pendulumjoint& joint2, double dt, double
 void timeStepLeapfrog(Pendulumjoint& j1, Pendulumjoint& j2, double dt, double g);
 
 void getKartesianCoordinates(const Pendulumjoint& joint1, const Pendulumjoint& joint2,
-                             double& x1, double& y1, double& x2, double& y2);
+                             float& x1, float& y1, float& x2, float& y2);
 
 #endif

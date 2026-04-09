@@ -16,6 +16,7 @@ using namespace std;
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 void getAndUpdatePendulumParameters(Pendulumjoint &joint1, Pendulumjoint &joint2, UI::parameters& params);
+void restartSimulation(Pendulumjoint &joint1, Pendulumjoint &joint2, UI::parameters& params );
 
 int main() {
 
@@ -48,13 +49,14 @@ int main() {
     UI ui(window);
 
     // ------------------------------------------------------------
-    // Pendel initialisieren und Kreise vorbereiten
+    // Pendel initialisieren
     // ------------------------------------------------------------
 
     Pendulumjoint joint1 = {1.0, 1.0, 0.0, 0.0};
     Pendulumjoint joint2 = {1.0, 1.0, 0.0, 0.0};
 
     float scale = 0.75f / (joint1.length + joint2.length);
+    float x1, y1, x2, y2;
 
     getAndUpdatePendulumParameters(joint1, joint2, ui.getParams());
 
@@ -77,12 +79,7 @@ int main() {
 
 
         if (!params.run) {
-            // Restart simulation
-            joint1.theta = params.angle1 * M_PI / 180.0;
-            joint2.theta = params.angle2 * M_PI / 180.0;
-            joint1.omega = 0.0;
-            joint2.omega = 0.0;
-
+            restartSimulation(joint1, joint2, params);
             renderer.clearTrace(); 
         }
 
@@ -91,15 +88,9 @@ int main() {
             timeStepRK4(joint1, joint2, Config::DT, params.gravity);
         }
 
-        double x1, y1, x2, y2;
         getKartesianCoordinates(joint1, joint2, x1, y1, x2, y2);
 
-        float fx1 = static_cast<float>(x1);
-        float fy1 = static_cast<float>(y1);
-        float fx2 = static_cast<float>(x2);
-        float fy2 = static_cast<float>(y2);
-
-        renderer.update(fx1, fy1, fx2, fy2);
+        renderer.update(x1, y1, x2, y2);
 
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
@@ -132,4 +123,11 @@ void getAndUpdatePendulumParameters(Pendulumjoint &joint1, Pendulumjoint &joint2
 
     joint2.length = params.length2;
     joint2.mass = params.mass2;
+}
+
+void restartSimulation(Pendulumjoint &joint1, Pendulumjoint &joint2, UI::parameters& params) {
+    joint1.theta = params.angle1 * M_PI / 180.0;
+    joint2.theta = params.angle2 * M_PI / 180.0;
+    joint1.omega = 0.0;
+    joint2.omega = 0.0;
 }
