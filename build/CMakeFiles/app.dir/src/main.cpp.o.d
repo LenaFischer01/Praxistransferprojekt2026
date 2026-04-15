@@ -193,4 +193,8 @@ CMakeFiles/app.dir/src/main.cpp.o: \
  /home/lenafischer/code/praxistransferprojekt2026/header/renderer.h \
  /home/lenafischer/code/praxistransferprojekt2026/header/shader.h \
  /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
- /home/lenafischer/code/praxistransferprojekt2026/header/ui.h
+ /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/fpsCounter.h \
+ /usr/include/c++/13/chrono /usr/include/c++/13/bits/chrono.h \
+ /usr/include/c++/13/ratio /usr/include/c++/13/cstdint \
+ /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h

@@ -9,6 +9,7 @@
 #include "config.h"
 #include "renderer.h"
 #include "ui.h"
+#include "fpsCounter.h"
 
 using namespace std;
 
@@ -47,6 +48,7 @@ int main() {
     Shader customShader(Config::VERTEX_SHADER, Config::FRAGMENT_SHADER);
     Renderer renderer(customShader);
     UI ui(window);
+    FpsCounter fpsCounter;
 
     // ------------------------------------------------------------
     // Pendel initialisieren
@@ -106,6 +108,12 @@ int main() {
         ui.render();
 
         glfwSwapBuffers(window);
+
+        if (fpsCounter.update()) {
+            string title = string(Config::WINDOW_TITLE) + " - FPS: " + to_string(int(fpsCounter.fps));
+            glfwSetWindowTitle(window, title.c_str());
+        }
+
     }
 
     glfwTerminate();

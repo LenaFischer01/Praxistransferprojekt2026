@@ -174,6 +174,7 @@ CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2
   /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/glad/glad.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/calculatePendulum.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
+  /home/lenafischer/code/praxistransferprojekt2026/header/fpsCounter.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/renderer.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/shader.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
@@ -191,6 +192,7 @@ CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/codecvt.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
@@ -218,6 +220,7 @@ CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
@@ -247,11 +250,14 @@ CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2
   /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/chrono \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -272,6 +278,7 @@ CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
@@ -952,7 +959,15 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
 /lib/x86_64-linux-gnu/libm.so.6:
 
-/home/lenafischer/code/praxistransferprojekt2026/header/shader.h:
+/lib/x86_64-linux-gnu/libc.so.6:
+
+/lib/x86_64-linux-gnu/libbsd.so.0:
+
+/lib/x86_64-linux-gnu/libXau.so.6:
+
+/lib/x86_64-linux-gnu/libX11.so.6:
+
+/usr/include/assert.h:
 
 /home/lenafischer/code/praxistransferprojekt2026/header/renderer.h:
 
@@ -961,8 +976,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/c++/13/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/c++/13/bits/postypes.h:
 
@@ -975,6 +988,8 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/c++/13/bits/hash_bytes.h:
+
+/home/lenafischer/code/praxistransferprojekt2026/header/fpsCounter.h:
 
 /usr/include/c++/13/bits/localefwd.h:
 
@@ -1017,10 +1032,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/c++/13/cstdio:
 
 /usr/include/c++/13/fstream:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/13/bits/stl_algobase.h:
 
@@ -1068,8 +1079,6 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 
 /usr/include/c++/13/bits/ios_base.h:
 
-/lib/x86_64-linux-gnu/libXau.so.6:
-
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
@@ -1085,10 +1094,6 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 /usr/include/c++/13/bits/exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-CMakeFiles/app.dir/src/ui.cpp.o:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/13/tr1/poly_laguerre.tcc:
 
@@ -1298,6 +1303,10 @@ libimgui.a:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/usr/include/asm-generic/errno-base.h:
+
 /usr/include/c++/13/backward/binders.h:
 
 /usr/include/c++/13/bits/basic_ios.tcc:
@@ -1309,6 +1318,12 @@ libimgui.a:
 /usr/include/c++/13/bits/requires_hosted.h:
 
 /usr/include/GL/gl.h:
+
+CMakeFiles/app.dir/src/ui.cpp.o:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/13/bits/chrono.h:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
@@ -1354,9 +1369,17 @@ libimgui.a:
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
+/usr/include/c++/13/bits/std_abs.h:
+
+/usr/include/c++/13/bits/parse_numbers.h:
+
 /usr/include/c++/13/bits/sstream.tcc:
 
 /usr/include/c++/13/cwctype:
+
+/home/lenafischer/code/praxistransferprojekt2026/header/shader.h:
+
+/usr/include/c++/13/ratio:
 
 /usr/include/c++/13/bits/stl_construct.h:
 
@@ -1374,13 +1397,23 @@ libimgui.a:
 
 /usr/include/c++/13/bits/vector.tcc:
 
+/usr/include/c++/13/chrono:
+
 /usr/include/c++/13/clocale:
 
+/usr/include/c++/13/cstdint:
+
 /usr/include/c++/13/cstdlib:
+
+/usr/include/c++/13/ctime:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/c++/13/cwchar:
+
+/lib/x86_64-linux-gnu/libXdmcp.so.6:
+
+/usr/include/c++/13/exception:
 
 /usr/include/c++/13/bits/stl_pair.h:
 
@@ -1428,8 +1461,6 @@ libimgui.a:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/lib/x86_64-linux-gnu/libc.so.6:
-
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imconfig.h:
@@ -1468,18 +1499,8 @@ libimgui.a:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
-/lib/x86_64-linux-gnu/libX11.so.6:
-
 /home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp:
 
 /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp:
 
 /home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp:
-
-/usr/include/assert.h:
-
-/usr/include/c++/13/exception:
-
-/lib/x86_64-linux-gnu/libXdmcp.so.6:
-
-/lib/x86_64-linux-gnu/libbsd.so.0:
