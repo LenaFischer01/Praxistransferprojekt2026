@@ -6,7 +6,7 @@ namespace Config {
     constexpr int WINDOW_HEIGHT = 600;
     constexpr const char* WINDOW_TITLE = "Doppelpendel";
 
-    constexpr double DT = 0.001;
+    constexpr double DT = 0.002;
 
     constexpr float CIRCLE_RADIUS = 0.07f;
     constexpr int CIRCLE_SEGMENTS = 64;
