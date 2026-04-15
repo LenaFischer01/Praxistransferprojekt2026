@@ -25,6 +25,8 @@ public:
 
     void setCircleMultiplier(float multiplier1, float multiplier2) { circleMultiplier1_ = multiplier1; circleMultiplier2_ = multiplier2; }
 
+    void resetRenderer(int newTraceLength = Config::TRACE_POINTS);
+
 private:
     Shader shader_;
 
@@ -39,7 +41,6 @@ private:
     float circleMultiplier1_ = 1.00f; 
     float circleMultiplier2_ = 1.00f; 
 
-
     // Spur
     unsigned int traceVAO_ = 0, traceVBO_ = 0;
     std::vector<float> traceVerts_; // maxTracePoints * 3 floats
@@ -48,7 +49,7 @@ private:
 private:
     void initLineBuffers();
     void initCircleBuffers();
-    void initTraceBuffers();
+    void initTraceBuffers(int TracePoints = Config::TRACE_POINTS);
     void fillDisk(int circleIndex, float cx, float cy);
     void addTracePoint(float x, float y);
 };

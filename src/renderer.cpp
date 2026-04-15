@@ -22,6 +22,13 @@ Renderer::~Renderer() {
     if (traceVAO_)  glDeleteVertexArrays(1, &traceVAO_);
 }
 
+void Renderer::resetRenderer(int newTraceLength) {
+    // Reshape traceVerts_ to new size based on updated trace length
+    tracePointCount_ = 0;
+    traceVerts_.resize(newTraceLength * 3, 0.0f);
+    initTraceBuffers(newTraceLength); // Reinitialize trace buffers to reflect new size
+}
+
 void Renderer::initLineBuffers() {
     glGenVertexArrays(1, &lineVAO_);
     glGenBuffers(1, &lineVBO_);
@@ -50,13 +57,13 @@ void Renderer::initCircleBuffers() {
     glBindVertexArray(0);
 }
 
-void Renderer::initTraceBuffers() {
+void Renderer::initTraceBuffers(int TracePoints) {
     glGenVertexArrays(1, &traceVAO_);
     glGenBuffers(1, &traceVBO_);
 
     glBindVertexArray(traceVAO_);
     glBindBuffer(GL_ARRAY_BUFFER, traceVBO_);
-    glBufferData(GL_ARRAY_BUFFER, Config::TRACE_POINTS * 3 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, TracePoints * 3 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
@@ -92,7 +99,7 @@ void Renderer::fillDisk(int circleIndex, float cx, float cy) {
 }
 
 void Renderer::addTracePoint(float x, float y) {
-    if (tracePointCount_ < Config::TRACE_POINTS) {
+    if (tracePointCount_ < traceVerts_.size() / 3) {
         int idx = tracePointCount_ * 3;
         traceVerts_[idx + 0] = x;
         traceVerts_[idx + 1] = y;
@@ -100,10 +107,10 @@ void Renderer::addTracePoint(float x, float y) {
         ++tracePointCount_;
     } else {
         // Shift all points left and add new point at the end
-        for (int i = 0; i < (Config::TRACE_POINTS - 1) * 3; ++i) {
+        for (int i = 0; i < (traceVerts_.size() / 3 - 1) * 3; ++i) {
             traceVerts_[i] = traceVerts_[i + 3];
         }
-        int idx = (Config::TRACE_POINTS - 1) * 3;
+        int idx = (traceVerts_.size() / 3 - 1) * 3;
         traceVerts_[idx + 0] = x;
         traceVerts_[idx + 1] = y;
         traceVerts_[idx + 2] = 0.0f;
@@ -141,7 +148,14 @@ void Renderer::draw(float scale, bool showTrace) {
     shader_.setFloat("scale", scale);
     shader_.setVec2("offset", 0.0f, 0.0f);
 
-    glLineWidth(Config::LINE_WIDTH);          
+    glLineWidth(Config::LINE_WIDTH);     
+    
+    // Trace
+    if (showTrace) {
+        shader_.setVec4("uColor", 0.933333f, 0.686275f, 0.380392f, 1.0f);
+        glBindVertexArray(traceVAO_);
+        glDrawArrays(GL_LINE_STRIP, 0, tracePointCount_);
+    }
 
     // Lines
     shader_.setVec4("uColor", 0.415686f, 0.050980f, 0.513726f, 1.0f);
@@ -154,13 +168,6 @@ void Renderer::draw(float scale, bool showTrace) {
     glDrawArrays(GL_TRIANGLE_FAN, 0 * vertsPerCircle_, vertsPerCircle_);
     glDrawArrays(GL_TRIANGLE_FAN, 1 * vertsPerCircle_, vertsPerCircle_);
     glDrawArrays(GL_TRIANGLE_FAN, 2 * vertsPerCircle_, vertsPerCircle_);
-
-    // Trace
-    if (showTrace) {
-        shader_.setVec4("uColor", 0.933333f, 0.686275f, 0.380392f, 1.0f);
-        glBindVertexArray(traceVAO_);
-        glDrawArrays(GL_LINE_STRIP, 0, tracePointCount_);
-    }
 
     glBindVertexArray(0);
 }

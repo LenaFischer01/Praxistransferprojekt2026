@@ -20,6 +20,9 @@ public:
         float angle1 = 0.0f;
         float angle2 = 0.0f;
 
+        int traceLength = 1000;
+        bool traceLengthChanged = false;
+
         bool run = false;
     } params;
 

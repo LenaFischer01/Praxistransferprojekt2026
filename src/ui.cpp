@@ -114,6 +114,11 @@ void UI::defineStyleAndUi() {
     ShiftImGuiHue(0.45f); // Shift hue by 5%
 
     ImGui::Checkbox("Spur", &params.showTrace);
+    ImGui::SameLine();
+    if (ImGui::InputInt("Spurlänge", &params.traceLength, 100, 1000) && params.traceLength > 0 && params.traceLength <= 99999) {
+        params.traceLengthChanged = true;
+    }
+
     ImGui::SliderFloat("Länge 1", &params.length1, 0.1f, 5.0f);
     ImGui::SliderFloat("Länge 2", &params.length2, 0.1f, 5.0f);
 

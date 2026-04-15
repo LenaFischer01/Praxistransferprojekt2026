@@ -10,7 +10,7 @@ namespace Config {
 
     constexpr float CIRCLE_RADIUS = 0.07f;
     constexpr int CIRCLE_SEGMENTS = 64;
-    constexpr int TRACE_POINTS = 1000;
+    constexpr int TRACE_POINTS = 1000; // Default 
     constexpr float LINE_WIDTH = 2.5f;
 
     constexpr const char* VERTEX_SHADER = "shaders/3.3.shader.vs";

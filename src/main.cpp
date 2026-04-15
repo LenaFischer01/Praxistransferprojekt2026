@@ -73,6 +73,12 @@ int main() {
 
         // Get current parameters from UI
         UI::parameters& params = ui.getParams();
+
+        if (params.traceLengthChanged) {
+            renderer.resetRenderer(params.traceLength); 
+            params.traceLengthChanged = false;
+        }
+
         getAndUpdatePendulumParameters(joint1, joint2, params);
         scale = 0.75f / (joint1.length + joint2.length);
         renderer.setCircleMultiplier(params.mass1 * 0.5f, params.mass2 * 0.5f);
@@ -80,7 +86,7 @@ int main() {
 
         if (!params.run) {
             restartSimulation(joint1, joint2, params);
-            renderer.clearTrace(); 
+            renderer.resetRenderer(params.traceLength); 
         }
 
         // Pendel simulieren
