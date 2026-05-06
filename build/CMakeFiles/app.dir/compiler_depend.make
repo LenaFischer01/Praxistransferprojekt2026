@@ -70,10 +70,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o: /home/lenafischer/code/praxistran
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
-CMakeFiles/app.dir/src/UIController.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp \
-  /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h \
-  /usr/include/stdc-predef.h
-
 CMakeFiles/app.dir/src/calculatePendulum.cpp.o: /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp \
   /home/lenafischer/code/praxistransferprojekt2026/header/calculatePendulum.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/pendulumJoint.h \
@@ -179,7 +175,7 @@ CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2
   /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/glad/glad.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/GLFWContext.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/GPUBuffer.h \
-  /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h \
+  /home/lenafischer/code/praxistransferprojekt2026/header/UiState.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/calculatePendulum.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/fpsCounter.h \
@@ -1010,7 +1006,7 @@ CMakeFiles/app.dir/src/ui.cpp.o: /home/lenafischer/code/praxistransferprojekt202
   /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_opengl3.h \
   /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imconfig.h \
   /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imgui.h \
-  /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h \
+  /home/lenafischer/code/praxistransferprojekt2026/header/UiState.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
   /usr/include/GL/gl.h \
@@ -1071,7 +1067,6 @@ app: /lib/x86_64-linux-gnu/libX11.so.6 \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
   CMakeFiles/app.dir/external/glad/src/glad.c.o \
-  CMakeFiles/app.dir/src/UIController.cpp.o \
   CMakeFiles/app.dir/src/calculatePendulum.cpp.o \
   CMakeFiles/app.dir/src/main.cpp.o \
   CMakeFiles/app.dir/src/pendulumJoint.cpp.o \
@@ -1086,8 +1081,6 @@ CMakeFiles/app.dir/src/shader.cpp.o:
 CMakeFiles/app.dir/src/pendulumJoint.cpp.o:
 
 CMakeFiles/app.dir/src/calculatePendulum.cpp.o:
-
-CMakeFiles/app.dir/src/UIController.cpp.o:
 
 CMakeFiles/app.dir/external/glad/src/glad.c.o:
 
@@ -1134,8 +1127,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/assert.h:
 
 /usr/include/GL/glext.h:
-
-/home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
@@ -1272,8 +1263,6 @@ CMakeFiles/app.dir/src/renderer.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/home/lenafischer/code/praxistransferprojekt2026/header/UIController.h:
 
 /usr/include/string.h:
 
@@ -1437,12 +1426,6 @@ CMakeFiles/app.dir/src/main.cpp.o:
 
 /usr/include/c++/13/bits/move.h:
 
-/home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp:
-
-/usr/include/c++/13/ext/alloc_traits.h:
-
-/usr/include/c++/13/new:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/lib/x86_64-linux-gnu/libGL.so:
@@ -1603,6 +1586,12 @@ CMakeFiles/app.dir/src/ui.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
+/usr/include/c++/13/ext/alloc_traits.h:
+
+/home/lenafischer/code/praxistransferprojekt2026/header/UiState.h:
+
+/usr/include/c++/13/new:
+
 /usr/include/c++/13/ext/string_conversions.h:
 
 /usr/include/c++/13/tr1/bessel_function.tcc:
@@ -1682,3 +1671,5 @@ CMakeFiles/app.dir/src/ui.cpp.o:
 /home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp:
 
 /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp:
+
+/home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp:

@@ -22,7 +22,7 @@ CMakeFiles/app.dir/src/ui.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/KHR/khrplatform.h \
- /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/UiState.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imgui.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \

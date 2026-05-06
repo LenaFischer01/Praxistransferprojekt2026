@@ -71,11 +71,6 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
-CMakeFiles/app.dir/src/UIController.cpp.o
- /home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp
- /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h
- /usr/include/stdc-predef.h
-
 CMakeFiles/app.dir/src/calculatePendulum.cpp.o
  /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp
  /home/lenafischer/code/praxistransferprojekt2026/header/calculatePendulum.h
@@ -183,7 +178,7 @@ CMakeFiles/app.dir/src/main.cpp.o
  /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/glad/glad.h
  /home/lenafischer/code/praxistransferprojekt2026/header/GLFWContext.h
  /home/lenafischer/code/praxistransferprojekt2026/header/GPUBuffer.h
- /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h
+ /home/lenafischer/code/praxistransferprojekt2026/header/UiState.h
  /home/lenafischer/code/praxistransferprojekt2026/header/calculatePendulum.h
  /home/lenafischer/code/praxistransferprojekt2026/header/config.h
  /home/lenafischer/code/praxistransferprojekt2026/header/fpsCounter.h
@@ -1018,7 +1013,7 @@ CMakeFiles/app.dir/src/ui.cpp.o
  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_opengl3.h
  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imconfig.h
  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imgui.h
- /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h
+ /home/lenafischer/code/praxistransferprojekt2026/header/UiState.h
  /home/lenafischer/code/praxistransferprojekt2026/header/config.h
  /home/lenafischer/code/praxistransferprojekt2026/header/ui.h
  /usr/include/GL/gl.h
@@ -1080,7 +1075,6 @@ app
  /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so
  /usr/lib/x86_64-linux-gnu/libc_nonshared.a
  /home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/app.dir/external/glad/src/glad.c.o
- /home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/app.dir/src/UIController.cpp.o
  /home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/app.dir/src/calculatePendulum.cpp.o
  /home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/app.dir/src/main.cpp.o
  /home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/app.dir/src/pendulumJoint.cpp.o

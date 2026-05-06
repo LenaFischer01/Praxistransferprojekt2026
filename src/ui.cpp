@@ -3,7 +3,6 @@
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
 #include "config.h"
-#include "UIController.h"
 
 UI::UI(GLFWwindow* window) : window_(window) {
     InitImGui(window);
@@ -102,6 +101,10 @@ void UI::InitImGui(GLFWwindow* window) {
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
+
+    SetupImGuiStyle(0.8f);
+    ShiftImGuiHue(0.45f);
+
 }
 
 void UI::startFrame() {
@@ -112,8 +115,6 @@ void UI::startFrame() {
 
 void UI::defineStyleAndUi(UiState::Parameters& params) {
     ImGui::Begin("Settings", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
-    SetupImGuiStyle(0.8f);
-    ShiftImGuiHue(0.45f); // Shift hue by 5%
 
     ImGui::Checkbox("Spur", &params.showTrace);
     ImGui::SameLine();

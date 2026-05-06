@@ -192,7 +192,7 @@ CMakeFiles/app.dir/src/main.cpp.o: \
  /usr/include/c++/13/tr1/riemann_zeta.tcc \
  /home/lenafischer/code/praxistransferprojekt2026/header/GPUBuffer.h \
  /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
- /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/UiState.h \
  /home/lenafischer/code/praxistransferprojekt2026/header/fpsCounter.h \
  /usr/include/c++/13/chrono /usr/include/c++/13/bits/chrono.h \
  /usr/include/c++/13/ratio /usr/include/c++/13/cstdint \

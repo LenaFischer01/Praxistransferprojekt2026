@@ -4,7 +4,6 @@
 # SRC_FILES at CMakeLists.txt:8 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lenafischer/code/praxistransferprojekt2026/src/*.cpp")
 set(OLD_GLOB
-  "/home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp"
   "/home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp"
   "/home/lenafischer/code/praxistransferprojekt2026/src/main.cpp"
   "/home/lenafischer/code/praxistransferprojekt2026/src/pendulumJoint.cpp"

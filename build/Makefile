@@ -324,30 +324,6 @@ external/imgui/src/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/src/imgui_widgets.cpp.s
 .PHONY : external/imgui/src/imgui_widgets.cpp.s
 
-src/UIController.o: src/UIController.cpp.o
-.PHONY : src/UIController.o
-
-# target to build an object file
-src/UIController.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/UIController.cpp.o
-.PHONY : src/UIController.cpp.o
-
-src/UIController.i: src/UIController.cpp.i
-.PHONY : src/UIController.i
-
-# target to preprocess a source file
-src/UIController.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/UIController.cpp.i
-.PHONY : src/UIController.cpp.i
-
-src/UIController.s: src/UIController.cpp.s
-.PHONY : src/UIController.s
-
-# target to generate assembly for a file
-src/UIController.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/UIController.cpp.s
-.PHONY : src/UIController.cpp.s
-
 src/calculatePendulum.o: src/calculatePendulum.cpp.o
 .PHONY : src/calculatePendulum.o
 
@@ -524,9 +500,6 @@ help:
 	@echo "... external/imgui/src/imgui_widgets.o"
 	@echo "... external/imgui/src/imgui_widgets.i"
 	@echo "... external/imgui/src/imgui_widgets.s"
-	@echo "... src/UIController.o"
-	@echo "... src/UIController.i"
-	@echo "... src/UIController.s"
 	@echo "... src/calculatePendulum.o"
 	@echo "... src/calculatePendulum.i"
 	@echo "... src/calculatePendulum.s"

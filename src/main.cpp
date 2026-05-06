@@ -9,7 +9,7 @@
 #include "fpsCounter.h"
 #include "GLFWContext.h"
 #include "simulation.h"
-#include "UIController.h"
+#include "UiState.h"
 
 using namespace std;
 

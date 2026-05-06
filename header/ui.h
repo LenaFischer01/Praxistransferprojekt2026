@@ -1,6 +1,6 @@
 #pragma once
 #include <GLFW/glfw3.h>
-#include "UIController.h"
+#include "UiState.h"
 
 class UI {
 public:

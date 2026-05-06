@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/app.dir/link.d"
   "CMakeFiles/app.dir/external/glad/src/glad.c.o"
   "CMakeFiles/app.dir/external/glad/src/glad.c.o.d"
-  "CMakeFiles/app.dir/src/UIController.cpp.o"
-  "CMakeFiles/app.dir/src/UIController.cpp.o.d"
   "CMakeFiles/app.dir/src/calculatePendulum.cpp.o"
   "CMakeFiles/app.dir/src/calculatePendulum.cpp.o.d"
   "CMakeFiles/app.dir/src/main.cpp.o"

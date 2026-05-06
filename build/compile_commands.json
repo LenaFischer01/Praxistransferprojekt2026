@@ -37,12 +37,6 @@
 },
 {
   "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
-  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/UIController.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp",
-  "file": "/home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp",
-  "output": "CMakeFiles/app.dir/src/UIController.cpp.o"
-},
-{
-  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
   "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/calculatePendulum.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp",
   "file": "/home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp",
   "output": "CMakeFiles/app.dir/src/calculatePendulum.cpp.o"

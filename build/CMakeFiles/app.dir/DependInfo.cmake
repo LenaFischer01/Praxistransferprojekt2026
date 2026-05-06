@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lenafischer/code/praxistransferprojekt2026/external/glad/src/glad.c" "CMakeFiles/app.dir/external/glad/src/glad.c.o" "gcc" "CMakeFiles/app.dir/external/glad/src/glad.c.o.d"
-  "/home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp" "CMakeFiles/app.dir/src/UIController.cpp.o" "gcc" "CMakeFiles/app.dir/src/UIController.cpp.o.d"
   "/home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp" "CMakeFiles/app.dir/src/calculatePendulum.cpp.o" "gcc" "CMakeFiles/app.dir/src/calculatePendulum.cpp.o.d"
   "/home/lenafischer/code/praxistransferprojekt2026/src/main.cpp" "CMakeFiles/app.dir/src/main.cpp.o" "gcc" "CMakeFiles/app.dir/src/main.cpp.o.d"
   "/home/lenafischer/code/praxistransferprojekt2026/src/pendulumJoint.cpp" "CMakeFiles/app.dir/src/pendulumJoint.cpp.o" "gcc" "CMakeFiles/app.dir/src/pendulumJoint.cpp.o.d"

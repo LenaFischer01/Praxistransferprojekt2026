@@ -6,7 +6,6 @@
 			"listDirectories" : true,
 			"paths" : 
 			[
-				"/home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp",
 				"/home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp",
 				"/home/lenafischer/code/praxistransferprojekt2026/src/main.cpp",
 				"/home/lenafischer/code/praxistransferprojekt2026/src/pendulumJoint.cpp",
