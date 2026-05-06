@@ -4,10 +4,44 @@
 # SRC_FILES at CMakeLists.txt:8 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/lenafischer/code/praxistransferprojekt2026/src/*.cpp")
 set(OLD_GLOB
+  "/home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp"
   "/home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp"
   "/home/lenafischer/code/praxistransferprojekt2026/src/main.cpp"
+  "/home/lenafischer/code/praxistransferprojekt2026/src/pendulumJoint.cpp"
   "/home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp"
   "/home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp"
+  "/home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  set(NEW_ONLY ${NEW_GLOB})
+  set(OLD_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM NEW_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM OLD_ONLY ${NEW_GLOB})
+  if(NEW_ONLY)
+    message("The following files were added:")
+    foreach(VAR_FILE IN LISTS NEW_ONLY)
+      message("  +${VAR_FILE}")
+    endforeach()
+  endif()
+  if(OLD_ONLY)
+    message("The following files were removed:")
+    foreach(VAR_FILE IN LISTS OLD_ONLY)
+      message("  -${VAR_FILE}")
+    endforeach()
+  endif()
+  file(TOUCH_NOCREATE "/home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/cmake.verify_globs")
+endif()
+
+# EXTERNAL_FILES_IMGUI at CMakeLists.txt:9 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/*.cpp")
+set(OLD_GLOB
+  "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_glfw.cpp"
+  "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_opengl3.cpp"
+  "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui.cpp"
+  "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_draw.cpp"
+  "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_tables.cpp"
+  "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui_widgets.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

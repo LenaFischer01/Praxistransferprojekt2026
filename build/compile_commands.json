@@ -1,6 +1,18 @@
 [
 {
   "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_glfw.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_glfw.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_opengl3.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_opengl3.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
   "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/imgui.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui.cpp",
   "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/imgui.cpp",
   "output": "CMakeFiles/imgui.dir/external/imgui/src/imgui.cpp.o"
@@ -25,21 +37,27 @@
 },
 {
   "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
-  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_glfw.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_glfw.cpp",
-  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_glfw.cpp",
-  "output": "CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_glfw.cpp.o"
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/UIController.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/src/UIController.cpp",
+  "output": "CMakeFiles/app.dir/src/UIController.cpp.o"
 },
 {
   "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
-  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_opengl3.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_opengl3.cpp",
-  "file": "/home/lenafischer/code/praxistransferprojekt2026/external/imgui/src/backends/imgui_impl_opengl3.cpp",
-  "output": "CMakeFiles/imgui.dir/external/imgui/src/backends/imgui_impl_opengl3.cpp.o"
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/calculatePendulum.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp",
+  "output": "CMakeFiles/app.dir/src/calculatePendulum.cpp.o"
 },
 {
   "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
   "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/main.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/main.cpp",
   "file": "/home/lenafischer/code/praxistransferprojekt2026/src/main.cpp",
   "output": "CMakeFiles/app.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/pendulumJoint.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/pendulumJoint.cpp",
+  "file": "/home/lenafischer/code/praxistransferprojekt2026/src/pendulumJoint.cpp",
+  "output": "CMakeFiles/app.dir/src/pendulumJoint.cpp.o"
 },
 {
   "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
@@ -52,12 +70,6 @@
   "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/shader.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp",
   "file": "/home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp",
   "output": "CMakeFiles/app.dir/src/shader.cpp.o"
-},
-{
-  "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",
-  "command": "/usr/bin/g++  -I/home/lenafischer/code/praxistransferprojekt2026/header -I/home/lenafischer/code/praxistransferprojekt2026/external/glad/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include -I/home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/calculatePendulum.cpp.o -c /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp",
-  "file": "/home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp",
-  "output": "CMakeFiles/app.dir/src/calculatePendulum.cpp.o"
 },
 {
   "directory": "/home/lenafischer/code/praxistransferprojekt2026/build",

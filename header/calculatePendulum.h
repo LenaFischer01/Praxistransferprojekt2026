@@ -1,29 +1,20 @@
-#ifndef PENDULUM_H
-#define PENDULUM_H
+#pragma once
 
-struct Pendulumjoint {
-    double length;
-    double mass;
-    double theta;
-    double omega;
-};
+#include "pendulumJoint.h"
 
 struct State {
     double theta1, omega1;
     double theta2, omega2;
 };
 
-// kommt irgendwo anders her (oder auch in pendulum.cpp implementieren)
-void calculatePendulum(const Pendulumjoint& j1, const Pendulumjoint& j2,
+void calculatePendulum(const pendulumJoint& j1, const pendulumJoint& j2,
                        double g, double& a1, double& a2);
 
 State derivatives(const State& s, double g);
 
-void timeStepEuler(Pendulumjoint& joint1, Pendulumjoint& joint2, double dt, double g);
-void timeStepRK4(Pendulumjoint& joint1, Pendulumjoint& joint2, double dt, double g);
-void timeStepLeapfrog(Pendulumjoint& j1, Pendulumjoint& j2, double dt, double g);
+void timeStepEuler(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g);
+void timeStepRK4(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g);
+void timeStepLeapfrog(pendulumJoint& j1, pendulumJoint& j2, double dt, double g);
 
-void getKartesianCoordinates(const Pendulumjoint& joint1, const Pendulumjoint& joint2,
+void getKartesianCoordinates(const pendulumJoint& joint1, const pendulumJoint& joint2,
                              float& x1, float& y1, float& x2, float& y2);
-
-#endif

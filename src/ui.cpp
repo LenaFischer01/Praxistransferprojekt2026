@@ -2,6 +2,8 @@
 #include "imgui.h"
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
+#include "config.h"
+#include "UIController.h"
 
 UI::UI(GLFWwindow* window) : window_(window) {
     InitImGui(window);
@@ -108,7 +110,7 @@ void UI::startFrame() {
     ImGui::NewFrame();
 }
 
-void UI::defineStyleAndUi() {
+void UI::defineStyleAndUi(UIController::Parameters& params) {
     ImGui::Begin("Settings", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
     SetupImGuiStyle(0.8f);
     ShiftImGuiHue(0.45f); // Shift hue by 5%
@@ -144,7 +146,7 @@ void UI::defineStyleAndUi() {
     }
     ImGui::SameLine();
     if (ImGui::Button("Reset simulation")) {
-        resetParameters();
+        UIController::getInstance().resetParameters();
     }
 
     ImGui::End();

@@ -1,5 +1,4 @@
-#ifndef FPSCOUNTER_H
-#define FPSCOUNTER_H
+#pragma once
 
 #include <chrono>
 #include <string>
@@ -25,5 +24,3 @@ struct FpsCounter {
         return false;
     }
 };
-
-#endif

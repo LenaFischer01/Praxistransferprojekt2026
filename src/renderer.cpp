@@ -13,14 +13,7 @@ Renderer::Renderer(const Shader& shader)
     initTraceBuffers();
 }
 
-Renderer::~Renderer() {
-    if (lineVBO_)   glDeleteBuffers(1, &lineVBO_);
-    if (lineVAO_)   glDeleteVertexArrays(1, &lineVAO_);
-    if (circleVBO_) glDeleteBuffers(1, &circleVBO_);
-    if (circleVAO_) glDeleteVertexArrays(1, &circleVAO_);
-    if (traceVBO_)  glDeleteBuffers(1, &traceVBO_);
-    if (traceVAO_)  glDeleteVertexArrays(1, &traceVAO_);
-}
+Renderer::~Renderer() {}
 
 void Renderer::resetRenderer(int newTraceLength) {
     // Reshape traceVerts_ to new size based on updated trace length
@@ -30,48 +23,36 @@ void Renderer::resetRenderer(int newTraceLength) {
 }
 
 void Renderer::initLineBuffers() {
-    glGenVertexArrays(1, &lineVAO_);
-    glGenBuffers(1, &lineVBO_);
-
-    glBindVertexArray(lineVAO_);
-    glBindBuffer(GL_ARRAY_BUFFER, lineVBO_);
+    lineBuffer_.bind();
     glBufferData(GL_ARRAY_BUFFER, sizeof(lineVerts_), nullptr, GL_DYNAMIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    glBindVertexArray(0);
+    lineBuffer_.unbind();
 }
 
 void Renderer::initCircleBuffers() {
-    glGenVertexArrays(1, &circleVAO_);
-    glGenBuffers(1, &circleVBO_);
-
-    glBindVertexArray(circleVAO_);
-    glBindBuffer(GL_ARRAY_BUFFER, circleVBO_);
+    circleBuffer_.bind();
     glBufferData(GL_ARRAY_BUFFER, circles_.size() * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    glBindVertexArray(0);
+    circleBuffer_.unbind();
 }
 
 void Renderer::initTraceBuffers(int TracePoints) {
-    glGenVertexArrays(1, &traceVAO_);
-    glGenBuffers(1, &traceVBO_);
-
-    glBindVertexArray(traceVAO_);
-    glBindBuffer(GL_ARRAY_BUFFER, traceVBO_);
+    traceBuffer_.bind();
     glBufferData(GL_ARRAY_BUFFER, TracePoints * 3 * sizeof(float), nullptr, GL_DYNAMIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    glBindVertexArray(0);
+    traceBuffer_.unbind();
 }
 
-void Renderer::fillDisk(int circleIndex, float cx, float cy) {
+void Renderer::fillDisk(int circleIndex, float cx, float cy, float multiplier) {
     const int startVertex = circleIndex * vertsPerCircle_;
     const int startFloat  = 3 * startVertex;
 
@@ -80,17 +61,7 @@ void Renderer::fillDisk(int circleIndex, float cx, float cy) {
     circles_[startFloat + 1] = cy;
     circles_[startFloat + 2] = 0.0f;
 
-    // Ring
-    // Multiplier1 for circle 1, Multiplier2 for circle 2
-    float multiplier = 0.0f;
     for (int i = 0; i <= Config::CIRCLE_SEGMENTS; ++i) {
-            if (circleIndex == 1) {
-                multiplier = circleMultiplier1_;
-            } else if (circleIndex == 2) {
-                multiplier = circleMultiplier2_;
-            } else {
-                multiplier = 1.0f; // Default for the first circle
-            }
         float a = 2.0f * (float)M_PI * (float)i / (float)Config::CIRCLE_SEGMENTS;
         circles_[startFloat + 3 * (1 + i) + 0] = cx + Config::CIRCLE_RADIUS * std::cos(a) * multiplier;
         circles_[startFloat + 3 * (1 + i) + 1] = cy + Config::CIRCLE_RADIUS * std::sin(a) * multiplier;
@@ -127,20 +98,23 @@ void Renderer::update(float x1, float y1, float x2, float y2) {
     lineVerts_[9]  = x2;   lineVerts_[10] = y2;   lineVerts_[11] = 0.0f;
 
     fillDisk(0, 0.0f, 0.0f);
-    fillDisk(1, x1,   y1);
-    fillDisk(2, x2,   y2);
+    fillDisk(1, x1,   y1, circleMultiplier1_);
+    fillDisk(2, x2,   y2, circleMultiplier2_);
 
     addTracePoint(x2, y2);
 
     // Upload to GPU
-    glBindBuffer(GL_ARRAY_BUFFER, lineVBO_);
+    lineBuffer_.bind();
     glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(lineVerts_), lineVerts_);
+    lineBuffer_.unbind();
 
-    glBindBuffer(GL_ARRAY_BUFFER, circleVBO_);
+    circleBuffer_.bind();
     glBufferSubData(GL_ARRAY_BUFFER, 0, circles_.size() * sizeof(float), circles_.data());
+    circleBuffer_.unbind();
 
-    glBindBuffer(GL_ARRAY_BUFFER, traceVBO_);
+    traceBuffer_.bind();
     glBufferSubData(GL_ARRAY_BUFFER, 0, tracePointCount_ * 3 * sizeof(float), traceVerts_.data());
+    traceBuffer_.unbind();
 }
 
 void Renderer::draw(float scale, bool showTrace) {
@@ -152,19 +126,19 @@ void Renderer::draw(float scale, bool showTrace) {
     
     // Trace
     if (showTrace) {
-        shader_.setVec4("uColor", 0.933333f, 0.686275f, 0.380392f, 1.0f);
-        glBindVertexArray(traceVAO_);
+        shader_.setVec4("uColor", Config::COLOR_TRACE.r, Config::COLOR_TRACE.g, Config::COLOR_TRACE.b, Config::COLOR_TRACE.a);
+        glBindVertexArray(traceBuffer_.getVAO());
         glDrawArrays(GL_LINE_STRIP, 0, tracePointCount_);
     }
 
     // Lines
-    shader_.setVec4("uColor", 0.415686f, 0.050980f, 0.513726f, 1.0f);
-    glBindVertexArray(lineVAO_);
+    shader_.setVec4("uColor", Config::COLOR_LINES.r, Config::COLOR_LINES.g, Config::COLOR_LINES.b, Config::COLOR_LINES.a);
+    glBindVertexArray(lineBuffer_.getVAO());
     glDrawArrays(GL_LINES, 0, 4);
 
     // Circles
-    shader_.setVec4("uColor", 0.933333f, 0.364706f, 0.423529f, 1.0f);
-    glBindVertexArray(circleVAO_);
+    shader_.setVec4("uColor", Config::COLOR_CIRCLES.r, Config::COLOR_CIRCLES.g, Config::COLOR_CIRCLES.b, Config::COLOR_CIRCLES.a);
+    glBindVertexArray(circleBuffer_.getVAO());
     glDrawArrays(GL_TRIANGLE_FAN, 0 * vertsPerCircle_, vertsPerCircle_);
     glDrawArrays(GL_TRIANGLE_FAN, 1 * vertsPerCircle_, vertsPerCircle_);
     glDrawArrays(GL_TRIANGLE_FAN, 2 * vertsPerCircle_, vertsPerCircle_);

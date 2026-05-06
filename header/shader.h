@@ -1,6 +1,4 @@
-#ifndef SHADER_H
-#define SHADER_H
-
+#pragma once
 #include <glad/glad.h> // include glad to get all the required OpenGL headers
   
 #include <string>
@@ -22,11 +20,10 @@ public:
     void setBool(const std::string &name, bool value) const;
     void setInt(const std::string &name, int value) const;
     void setFloat(const std::string &name, float value) const;
-    void setVec2(const std::string &name, float x, float y);
-    void setVec4(const std::string &name, float x, float y, float z, float w);
+    void setVec2(const std::string &name, float x, float y) const;
+    void setVec4(const std::string &name, float x, float y, float z, float w) const;
 
 private:
     // utility function for checking shader compilation/linking errors.
     void checkCompileErrors(unsigned int shader, std::string type);
 };
-#endif

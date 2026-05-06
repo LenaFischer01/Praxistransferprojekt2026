@@ -113,6 +113,7 @@ preinstall/fast:
 
 # clear depends
 depend:
+	$(CMAKE_COMMAND) -P /home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -323,6 +324,30 @@ external/imgui/src/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/src/imgui_widgets.cpp.s
 .PHONY : external/imgui/src/imgui_widgets.cpp.s
 
+src/UIController.o: src/UIController.cpp.o
+.PHONY : src/UIController.o
+
+# target to build an object file
+src/UIController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/UIController.cpp.o
+.PHONY : src/UIController.cpp.o
+
+src/UIController.i: src/UIController.cpp.i
+.PHONY : src/UIController.i
+
+# target to preprocess a source file
+src/UIController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/UIController.cpp.i
+.PHONY : src/UIController.cpp.i
+
+src/UIController.s: src/UIController.cpp.s
+.PHONY : src/UIController.s
+
+# target to generate assembly for a file
+src/UIController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/UIController.cpp.s
+.PHONY : src/UIController.cpp.s
+
 src/calculatePendulum.o: src/calculatePendulum.cpp.o
 .PHONY : src/calculatePendulum.o
 
@@ -370,6 +395,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/pendulumJoint.o: src/pendulumJoint.cpp.o
+.PHONY : src/pendulumJoint.o
+
+# target to build an object file
+src/pendulumJoint.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/pendulumJoint.cpp.o
+.PHONY : src/pendulumJoint.cpp.o
+
+src/pendulumJoint.i: src/pendulumJoint.cpp.i
+.PHONY : src/pendulumJoint.i
+
+# target to preprocess a source file
+src/pendulumJoint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/pendulumJoint.cpp.i
+.PHONY : src/pendulumJoint.cpp.i
+
+src/pendulumJoint.s: src/pendulumJoint.cpp.s
+.PHONY : src/pendulumJoint.s
+
+# target to generate assembly for a file
+src/pendulumJoint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/pendulumJoint.cpp.s
+.PHONY : src/pendulumJoint.cpp.s
 
 src/renderer.o: src/renderer.cpp.o
 .PHONY : src/renderer.o
@@ -475,12 +524,18 @@ help:
 	@echo "... external/imgui/src/imgui_widgets.o"
 	@echo "... external/imgui/src/imgui_widgets.i"
 	@echo "... external/imgui/src/imgui_widgets.s"
+	@echo "... src/UIController.o"
+	@echo "... src/UIController.i"
+	@echo "... src/UIController.s"
 	@echo "... src/calculatePendulum.o"
 	@echo "... src/calculatePendulum.i"
 	@echo "... src/calculatePendulum.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pendulumJoint.o"
+	@echo "... src/pendulumJoint.i"
+	@echo "... src/pendulumJoint.s"
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"
@@ -501,6 +556,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /home/lenafischer/code/praxistransferprojekt2026/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -22,6 +22,7 @@ CMakeFiles/app.dir/src/ui.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/KHR/khrplatform.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imgui.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
@@ -30,4 +31,5 @@ CMakeFiles/app.dir/src/ui.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h /usr/include/assert.h \
  /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_glfw.h \
- /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_opengl3.h
+ /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/backends/imgui_impl_opengl3.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/config.h

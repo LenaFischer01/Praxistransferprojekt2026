@@ -2,6 +2,7 @@ CMakeFiles/app.dir/src/calculatePendulum.cpp.o: \
  /home/lenafischer/code/praxistransferprojekt2026/src/calculatePendulum.cpp \
  /usr/include/stdc-predef.h \
  /home/lenafischer/code/praxistransferprojekt2026/header/calculatePendulum.h \
+ /home/lenafischer/code/praxistransferprojekt2026/header/pendulumJoint.h \
  /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

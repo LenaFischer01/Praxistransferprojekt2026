@@ -5,12 +5,11 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_CXX_STANDARD 17)
 
+file(GLOB SRC_FILES CONFIGURE_DEPENDS "src/*.cpp")
+file(GLOB_RECURSE EXTERNAL_FILES_IMGUI CONFIGURE_DEPENDS "external/imgui/*.cpp")
+
 add_executable(app
-  src/main.cpp
-  src/renderer.cpp
-  src/shader.cpp
-  src/calculatePendulum.cpp
-  src/ui.cpp
+  ${SRC_FILES}
   external/glad/src/glad.c
 )
 
@@ -22,15 +21,7 @@ add_custom_target(copy_shaders ALL
 
 add_dependencies(app copy_shaders)
 
-add_library(imgui STATIC
-  external/imgui/src/imgui.cpp
-  external/imgui/src/imgui_draw.cpp
-  external/imgui/src/imgui_tables.cpp
-  external/imgui/src/imgui_widgets.cpp
-  external/imgui/src/imgui_tables.cpp
-  external/imgui/src/backends/imgui_impl_glfw.cpp
-  external/imgui/src/backends/imgui_impl_opengl3.cpp
-)
+add_library(imgui STATIC ${EXTERNAL_FILES_IMGUI})
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GLFW REQUIRED glfw3)
