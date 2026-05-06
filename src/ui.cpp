@@ -110,7 +110,7 @@ void UI::startFrame() {
     ImGui::NewFrame();
 }
 
-void UI::defineStyleAndUi(UIController::Parameters& params) {
+void UI::defineStyleAndUi(UiState::Parameters& params) {
     ImGui::Begin("Settings", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
     SetupImGuiStyle(0.8f);
     ShiftImGuiHue(0.45f); // Shift hue by 5%
@@ -146,7 +146,7 @@ void UI::defineStyleAndUi(UIController::Parameters& params) {
     }
     ImGui::SameLine();
     if (ImGui::Button("Reset simulation")) {
-        UIController::getInstance().resetParameters();
+        params.resetRequested = true;
     }
 
     ImGui::End();

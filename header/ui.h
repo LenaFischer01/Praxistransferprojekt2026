@@ -8,7 +8,7 @@ public:
     ~UI();
 
     void startFrame();
-    void defineStyleAndUi(UIController::Parameters& params);
+    void defineStyleAndUi(UiState::Parameters& params);
     void render();
 
 private:

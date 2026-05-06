@@ -28,6 +28,7 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath) {
         catch (std::ifstream::failure& e)
         {
             std::cout << "ERROR::SHADER::FILE_NOT_SUCCESSFULLY_READ: " << e.what() << std::endl;
+            return;
         }
         const char* vShaderCode = vertexCode.c_str();
         const char * fShaderCode = fragmentCode.c_str();
@@ -52,6 +53,10 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath) {
         // delete the shaders as they're linked into our program now and no longer necessary
         glDeleteShader(vertex);
         glDeleteShader(fragment);
+}
+
+Shader::~Shader() {
+    glDeleteProgram(ID);
 }
 
 void Shader::use() {

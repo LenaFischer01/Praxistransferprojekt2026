@@ -51,6 +51,7 @@ int main() {
         UI ui(window);
         FpsCounter fpsCounter;
         Simulation simulation;
+        UiState uiState;
 
         float x1, y1, x2, y2;
 
@@ -62,10 +63,15 @@ int main() {
             glfwPollEvents();
             processInput(window);
 
-            UIController::Parameters& params = UIController::getInstance().getParams();
+            UiState::Parameters& params = uiState.getParams();
 
             ui.startFrame();
             ui.defineStyleAndUi(params);
+
+            if (params.resetRequested) {
+                uiState.resetParameters();
+                renderer.resetRenderer(params.traceLength);
+            }
             
             if (params.traceLengthChanged) {
                 renderer.resetRenderer(params.traceLength); 

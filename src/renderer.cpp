@@ -1,5 +1,4 @@
 #include "renderer.h"
-#include "ui.h"
 
 Renderer::Renderer(const Shader& shader)
     : shader_(shader)

@@ -45,8 +45,8 @@ State derivatives(const State& s, double g) {
 
     double alpha1, alpha2;
 
-    pendulumJoint j1 = pendulumJoint(1.0, 1.0, s.theta1, s.omega1);
-    pendulumJoint j2 = pendulumJoint(1.0, 1.0, s.theta2, s.omega2);
+    pendulumJoint j1 = pendulumJoint(s.length1, s.mass1, s.theta1, s.omega1);
+    pendulumJoint j2 = pendulumJoint(s.length2, s.mass2, s.theta2, s.omega2);
 
     calculatePendulum(j1, j2, g, alpha1, alpha2);
 
@@ -68,7 +68,7 @@ void timeStepEuler(pendulumJoint& joint1, pendulumJoint& joint2, double dt, doub
 }
 
 void timeStepRK4(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g) {
-    State s{joint1.getTheta(), joint1.getOmega(), joint2.getTheta(), joint2.getOmega()};
+    State s{joint1.getTheta(), joint1.getOmega(), joint2.getTheta(), joint2.getOmega(), joint1.getLength(), joint1.getMass(), joint2.getLength(), joint2.getMass()};
 
     State k1 = derivatives(s, g);
 
@@ -76,7 +76,11 @@ void timeStepRK4(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double
         s.theta1 + 0.5 * dt * k1.theta1,
         s.omega1 + 0.5 * dt * k1.omega1,
         s.theta2 + 0.5 * dt * k1.theta2,
-        s.omega2 + 0.5 * dt * k1.omega2
+        s.omega2 + 0.5 * dt * k1.omega2,
+        s.length1,
+        s.mass1,
+        s.length2,
+        s.mass2
     };
     State k2 = derivatives(s2, g);
 
@@ -84,7 +88,11 @@ void timeStepRK4(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double
         s.theta1 + 0.5 * dt * k2.theta1,
         s.omega1 + 0.5 * dt * k2.omega1,
         s.theta2 + 0.5 * dt * k2.theta2,
-        s.omega2 + 0.5 * dt * k2.omega2
+        s.omega2 + 0.5 * dt * k2.omega2,
+        s.length1,
+        s.mass1,
+        s.length2,
+        s.mass2
     };
     State k3 = derivatives(s3, g);
 
@@ -92,7 +100,11 @@ void timeStepRK4(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double
         s.theta1 + dt * k3.theta1,
         s.omega1 + dt * k3.omega1,
         s.theta2 + dt * k3.theta2,
-        s.omega2 + dt * k3.omega2
+        s.omega2 + dt * k3.omega2,
+        s.length1,
+        s.mass1,
+        s.length2,
+        s.mass2
     };
     
     State k4 = derivatives(s4, g);

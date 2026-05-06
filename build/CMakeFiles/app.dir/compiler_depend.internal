@@ -579,12 +579,9 @@ CMakeFiles/app.dir/src/renderer.cpp.o
  /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/KHR/khrplatform.h
  /home/lenafischer/code/praxistransferprojekt2026/external/glad/include/glad/glad.h
  /home/lenafischer/code/praxistransferprojekt2026/header/GPUBuffer.h
- /home/lenafischer/code/praxistransferprojekt2026/header/UIController.h
  /home/lenafischer/code/praxistransferprojekt2026/header/config.h
  /home/lenafischer/code/praxistransferprojekt2026/header/renderer.h
  /home/lenafischer/code/praxistransferprojekt2026/header/shader.h
- /home/lenafischer/code/praxistransferprojekt2026/header/ui.h
- /usr/include/GLFW/glfw3.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h

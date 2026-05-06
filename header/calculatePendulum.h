@@ -5,6 +5,8 @@
 struct State {
     double theta1, omega1;
     double theta2, omega2;
+    double length1, mass1;
+    double length2, mass2;
 };
 
 void calculatePendulum(const pendulumJoint& j1, const pendulumJoint& j2,
