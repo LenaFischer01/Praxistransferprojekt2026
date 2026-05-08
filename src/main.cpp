@@ -1,6 +1,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <chrono>
 
 #include "shader.h"
 #include "config.h"
@@ -55,11 +56,19 @@ int main() {
 
         float x1, y1, x2, y2;
 
+        // Timing für framerate-unabhängige Simulation
+        auto lastFrameTime = std::chrono::high_resolution_clock::now();
+
         // ------------------------------------------------------------
         // Main Loop
         // ------------------------------------------------------------
         while (!glfwWindowShouldClose(window))
         {
+            // Berechne Delta-Zeit in Sekunden
+            auto currentTime = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double> deltaTime = currentTime - lastFrameTime;
+            lastFrameTime = currentTime;
+            
             glfwPollEvents();
             processInput(window);
 
@@ -88,7 +97,7 @@ int main() {
             }
 
             if (params.run) {
-                simulation.update(Config::DT);
+                simulation.update(deltaTime.count());
             }
             simulation.getCoordinates(x1, y1, x2, y2);
 

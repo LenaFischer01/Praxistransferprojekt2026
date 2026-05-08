@@ -5,6 +5,14 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Set Release as default build type with optimizations
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+endif()
+
+# Add optimization flags
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG" CACHE STRING "C++ Release flags" FORCE)
+
 file(GLOB SRC_FILES CONFIGURE_DEPENDS "src/*.cpp")
 file(GLOB_RECURSE EXTERNAL_FILES_IMGUI CONFIGURE_DEPENDS "external/imgui/*.cpp")
 
