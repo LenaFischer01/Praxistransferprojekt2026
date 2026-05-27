@@ -25,7 +25,7 @@ class Simulation {
                     timeStepLeapfrog(joint1_, joint2_, dt, gravity_);
                     break;
                 default:
-                    timeStepLeapfrog(joint1_, joint2_, dt, gravity_);
+                    timeStepRK4(joint1_, joint2_, dt, gravity_);
                     break;
             }
         }

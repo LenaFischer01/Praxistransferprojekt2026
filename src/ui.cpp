@@ -114,7 +114,7 @@ void UI::startFrame() {
 }
 
 void UI::defineStyleAndUi(UiState::Parameters& params) {
-    ImGui::Begin("Settings", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+    ImGui::Begin("Optionen", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
 
     ImGui::Checkbox("Spur", &params.showTrace);
     ImGui::SameLine();
@@ -143,7 +143,7 @@ void UI::defineStyleAndUi(UiState::Parameters& params) {
 
     ImGui::RadioButton("Euler", (int*)&params.method, AlgorithmSelect::Method::Euler);
     ImGui::SameLine();
-    ImGui::RadioButton("RK4", (int*)&params.method, AlgorithmSelect::Method::RK4);
+    ImGui::RadioButton("Runge Kutta 4", (int*)&params.method, AlgorithmSelect::Method::RK4);
     ImGui::SameLine();
     ImGui::RadioButton("Leapfrog", (int*)&params.method, AlgorithmSelect::Method::Leapfrog);
 
