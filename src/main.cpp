@@ -97,7 +97,7 @@ int main() {
             }
 
             if (params.run) {
-                simulation.update(deltaTime.count());
+                simulation.update(deltaTime.count(), params.method);
             }
             simulation.getCoordinates(x1, y1, x2, y2);
 

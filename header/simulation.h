@@ -13,8 +13,21 @@ class Simulation {
     public:
         Simulation() : joint1_(1.0, 1.0), joint2_(1.0, 1.0), gravity_(9.81), scale_(0.75f) {}
 
-        void update(double dt) { 
-            timeStepRK4(joint1_, joint2_, dt, gravity_); 
+        void update(double dt, AlgorithmSelect::Method method) { 
+            switch (method) {
+                case AlgorithmSelect::Method::Euler:
+                    timeStepEuler(joint1_, joint2_, dt, gravity_);
+                    break;
+                case AlgorithmSelect::Method::RK4:
+                    timeStepRK4(joint1_, joint2_, dt, gravity_);
+                    break;
+                case AlgorithmSelect::Method::Leapfrog:
+                    timeStepLeapfrog(joint1_, joint2_, dt, gravity_);
+                    break;
+                default:
+                    timeStepLeapfrog(joint1_, joint2_, dt, gravity_);
+                    break;
+            }
         }
 
         void getCoordinates(float& x1, float& y1, float& x2, float& y2) const {

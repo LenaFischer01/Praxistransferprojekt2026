@@ -176,6 +176,7 @@ CMakeFiles/app.dir/src/main.cpp.o: /home/lenafischer/code/praxistransferprojekt2
   /home/lenafischer/code/praxistransferprojekt2026/header/GLFWContext.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/GPUBuffer.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/UiState.h \
+  /home/lenafischer/code/praxistransferprojekt2026/header/algorithmSelect.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/calculatePendulum.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/fpsCounter.h \
@@ -1007,6 +1008,7 @@ CMakeFiles/app.dir/src/ui.cpp.o: /home/lenafischer/code/praxistransferprojekt202
   /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imconfig.h \
   /home/lenafischer/code/praxistransferprojekt2026/external/imgui/include/imgui.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/UiState.h \
+  /home/lenafischer/code/praxistransferprojekt2026/header/algorithmSelect.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/config.h \
   /home/lenafischer/code/praxistransferprojekt2026/header/ui.h \
   /usr/include/GL/gl.h \
@@ -1127,6 +1129,8 @@ CMakeFiles/app.dir/external/glad/src/glad.c.o:
 /usr/include/assert.h:
 
 /usr/include/GL/glext.h:
+
+/home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
@@ -1420,6 +1424,8 @@ CMakeFiles/app.dir/src/main.cpp.o:
 
 /usr/include/math.h:
 
+/home/lenafischer/code/praxistransferprojekt2026/header/algorithmSelect.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
@@ -1671,5 +1677,3 @@ CMakeFiles/app.dir/src/ui.cpp.o:
 /home/lenafischer/code/praxistransferprojekt2026/src/renderer.cpp:
 
 /home/lenafischer/code/praxistransferprojekt2026/src/shader.cpp:
-
-/home/lenafischer/code/praxistransferprojekt2026/src/ui.cpp:
