@@ -114,13 +114,15 @@ void UI::startFrame() {
 }
 
 void UI::defineStyleAndUi(UiState::Parameters& params) {
-    ImGui::Begin("Settings", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+    ImGui::Begin("Optionen", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
 
     ImGui::Checkbox("Spur", &params.showTrace);
     ImGui::SameLine();
     if (ImGui::InputInt("Spurlänge", &params.traceLength, 100, 1000) && params.traceLength > 0 && params.traceLength <= 99999) {
         params.traceLengthChanged = true;
     }
+
+    ImGui::Separator();
 
     ImGui::SliderFloat("Länge 1", &params.length1, 0.1f, 5.0f);
     ImGui::SliderFloat("Länge 2", &params.length2, 0.1f, 5.0f);
@@ -137,6 +139,16 @@ void UI::defineStyleAndUi(UiState::Parameters& params) {
         params.run = false;
     }
 
+    ImGui::Separator();
+
+    ImGui::RadioButton("Euler", (int*)&params.method, AlgorithmSelect::Method::Euler);
+    ImGui::SameLine();
+    ImGui::RadioButton("Runge Kutta 4", (int*)&params.method, AlgorithmSelect::Method::RK4);
+    ImGui::SameLine();
+    ImGui::RadioButton("Leapfrog", (int*)&params.method, AlgorithmSelect::Method::Leapfrog);
+
+    ImGui::Separator();
+
     if (ImGui::Button("Start simulation")) {
         params.run = true;
     }
@@ -149,7 +161,7 @@ void UI::defineStyleAndUi(UiState::Parameters& params) {
     if (ImGui::Button("Reset simulation")) {
         params.resetRequested = true;
     }
-
+  
     ImGui::End();
 }
 
