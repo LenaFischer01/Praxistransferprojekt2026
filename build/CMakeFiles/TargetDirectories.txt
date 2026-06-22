@@ -1,5 +1,0 @@
-/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/app.dir
-/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/copy_shaders.dir
-/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/imgui.dir
-/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/edit_cache.dir
-/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/rebuild_cache.dir
