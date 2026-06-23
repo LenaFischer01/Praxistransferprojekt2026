@@ -2,7 +2,7 @@
 
 #include "pendulumJoint.h"
 #include <cmath>
-#include "CalculationHanlder.h"
+#include "Calculation/CalculationHandler.h"
 
 class Simulation {
     private:

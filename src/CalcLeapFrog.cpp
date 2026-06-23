@@ -1,10 +1,6 @@
-#pragma once
+#include "CalcLeapFrog.h"
 
-#include "Calculator.h"
-
-class CalcLeapFrog : public Calculator {
-    public:
-        void timeStep(pendulumJoint& j1, pendulumJoint& j2, double dt, double g) {
+void CalcLeapFrog::timeStep(pendulumJoint& j1, pendulumJoint& j2, double dt, double g) {
             double a1, a2;
 
             calculatePendulum(j1, j2, g, a1, a2);
@@ -20,8 +16,3 @@ class CalcLeapFrog : public Calculator {
             j1.setOmega(j1.getOmega() + 0.5 * a1 * dt);
             j2.setOmega(j2.getOmega() + 0.5 * a2 * dt);
         }
-
-        std::string getName() const override {
-            return "Leapfrog";
-        }
-};

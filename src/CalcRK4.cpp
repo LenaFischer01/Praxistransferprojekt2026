@@ -1,18 +1,6 @@
-#pragma once
+#include "CalcRK4.h"
 
-#include "Calculator.h"
-
-class CalcRK4 : public Calculator {
-    public:
-
-        struct State {
-            double theta1, omega1;
-            double theta2, omega2;
-            double length1, mass1;
-            double length2, mass2;
-        };
-
-        State derivatives(const State& s, double g) {
+CalcRK4::State CalcRK4::derivatives(const State& s, double g) {
             State d;
 
             d.theta1 = s.omega1;
@@ -31,7 +19,7 @@ class CalcRK4 : public Calculator {
             return d;
         }
 
-        void timeStep(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g)
+void CalcRK4::timeStep(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g)
         {
             State s{joint1.getTheta(), joint1.getOmega(), joint2.getTheta(), joint2.getOmega(), joint1.getLength(), joint1.getMass(), joint2.getLength(), joint2.getMass()};
 
@@ -80,8 +68,3 @@ class CalcRK4 : public Calculator {
             joint2.setTheta(joint2.getTheta() + (dt / 6.0) * (k1.theta2 + 2*k2.theta2 + 2*k3.theta2 + k4.theta2));
             joint2.setOmega(joint2.getOmega() + (dt / 6.0) * (k1.omega2 + 2*k2.omega2 + 2*k3.omega2 + k4.omega2));
     }
-
-        std::string getName() const override {
-            return "Runge Kutta 4";
-        }
-};

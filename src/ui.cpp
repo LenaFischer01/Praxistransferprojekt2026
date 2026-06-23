@@ -3,11 +3,11 @@
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
 #include "config.h"
-#include "CalculationHanlder.h"
+#include "Calculation/CalculationHandler.h"
 
-#include "CalcEuler.h"
-#include "CalcRK4.h"
-#include "CalcLeapFrog.h"
+#include "Calculation/CalcEuler.h"
+#include "Calculation/CalcRK4.h"
+#include "Calculation/CalcLeapFrog.h"
 
 UI::UI(GLFWwindow* window) : window_(window) {
     InitImGui(window);
