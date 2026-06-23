@@ -1,0 +1,90 @@
+@startuml
+title Klassendiagramm — Pendelsimulation
+
+class Main {
+  +main()
+}
+
+class GLFWContext {
+  +GLFWContext()
+  +~GLFWContext()
+}
+
+class UI {
+  +UI(GLFWwindow* window)
+  +startFrame()
+  +defineStyleAndUi(UiState::Parameters&)
+  +render()
+}
+
+class UiState {
+  +Parameters params
+  +getParams()
+  +resetParameters()
+}
+
+class Simulation {
+  -pendulumJoint joint1_
+  -pendulumJoint joint2_
+  -double gravity_
+  -double scale_
+  +update(double dt, AlgorithmSelect::Method method)
+  +getCoordinates(float&, float&, float&, float&)
+  +setParameters(float l1, float l2, float m1, float m2, float g)
+  +reset(float angle1, float angle2)
+}
+
+class pendulumJoint {
+  -double length_
+  -double mass_
+  -double theta_
+  -double omega_
+  +getLength()
+  +getMass()
+  +getTheta()
+  +getOmega()
+}
+
+class Physics {
+  +timeStepEuler(...)
+  +timeStepRK4(...)
+  +timeStepLeapfrog(...)
+  +getKartesianCoordinates(...)
+}
+
+class Renderer {
+  -Shader shader_
+  -GPUBuffer lineBuffer_, circleBuffer_, traceBuffer_
+  +update(float x1, float y1, float x2, float y2)
+  +draw(float scale, bool showTrace)
+  +clearTrace()
+}
+
+class Shader {
+  +use()
+  +setFloat(name, value)
+}
+
+class GPUBuffer {
+  +bind()
+  +unbind()
+}
+
+'User' as User
+
+User --> UI : Interaktion (Parameter, Start/Stop, Reset)
+Main --> GLFWContext : init()/terminate()
+Main --> UI : erstellt
+Main --> Simulation : erstellt / konfiguriert
+Main --> Renderer : erstellt
+UI --> UiState : liest / schreibt Parameter
+UiState --> Simulation : liefert Parameter
+UI --> Simulation : reset / set
+Simulation "1" -- "2" pendulumJoint : besitzt
+Simulation ..> Physics : nutzt
+Simulation --> Renderer : liefert Koordinaten
+Renderer --> Shader : nutzt
+Renderer --> GPUBuffer : nutzt
+
+note right: Externe Bibliotheken (ImGui, glad etc.) ausgelassen
+@enduml
