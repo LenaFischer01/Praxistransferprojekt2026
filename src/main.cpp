@@ -46,7 +46,7 @@ int main() {
         Simulation simulation;
         UiState uiState;
 
-        float x1, y1, x2, y2;
+        CalculationHandler& calcHandler = CalculationHandler::getInstance();
 
         // Timing für framerate-unabhängige Simulation
         auto lastFrameTime = std::chrono::high_resolution_clock::now();
@@ -83,6 +83,9 @@ int main() {
 
             // Simulation und Renderer aktualisieren
             simulation.setParameters(params.length1, params.length2, params.mass1, params.mass2, params.gravity);
+            pendulumJoint& joint1 = simulation.getJoint1();
+            pendulumJoint& joint2 = simulation.getJoint2();
+
             renderer.setCircleMultiplier(params.mass1 * 0.5f, params.mass2 * 0.5f);
 
             // Parameterflags prüfen ob die Simulation zurückgesetzt werden soll oder ob sie läuft
@@ -90,15 +93,12 @@ int main() {
                 simulation.reset(params.angle1, params.angle2);
                 renderer.resetRenderer(params.traceLength); 
             }
-            if (params.run) {
-                simulation.update(deltaTime.count(), params.method);
+            else {
+                simulation.update(deltaTime.count());
             }
 
-            // Koordinaten der Pendel berechnen
-            simulation.getCoordinates(x1, y1, x2, y2);
-
             // Renderer aktualisieren
-            renderer.update(x1, y1, x2, y2);
+            renderer.update(joint1.getX(), joint1.getY(), joint2.getX(), joint2.getY());
 
             // Farben und Buffer löschen, Renderer zeichnen, UI rendern, Fenster tauschen
             glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -112,6 +112,9 @@ int main() {
                 string title = string(Config::WINDOW_TITLE) + " - FPS: " + to_string(int(fpsCounter.fps));
                 glfwSetWindowTitle(window, title.c_str());
             }
+
+            // Debug:
+            // cout << "Aktueller Calculator: " << calcHandler.getCalculatorString() << endl;
 
         }
 

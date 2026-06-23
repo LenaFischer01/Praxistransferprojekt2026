@@ -1,9 +1,9 @@
 [
 {
   "directory": "/home/lena/Code/Praxistransferprojekt2026/build",
-  "command": "/usr/bin/g++ -I/home/lena/Code/Praxistransferprojekt2026/header -I/home/lena/Code/Praxistransferprojekt2026/external/glad/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/calculatePendulum.cpp.o -c /home/lena/Code/Praxistransferprojekt2026/src/calculatePendulum.cpp",
-  "file": "/home/lena/Code/Praxistransferprojekt2026/src/calculatePendulum.cpp",
-  "output": "/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/app.dir/src/calculatePendulum.cpp.o"
+  "command": "/usr/bin/g++ -I/home/lena/Code/Praxistransferprojekt2026/header -I/home/lena/Code/Praxistransferprojekt2026/external/glad/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/GLFWContextFactory.cpp.o -c /home/lena/Code/Praxistransferprojekt2026/src/GLFWContextFactory.cpp",
+  "file": "/home/lena/Code/Praxistransferprojekt2026/src/GLFWContextFactory.cpp",
+  "output": "/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/app.dir/src/GLFWContextFactory.cpp.o"
 },
 {
   "directory": "/home/lena/Code/Praxistransferprojekt2026/build",

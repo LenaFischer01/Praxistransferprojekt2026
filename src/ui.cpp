@@ -3,6 +3,11 @@
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
 #include "config.h"
+#include "CalculationHanlder.h"
+
+#include "CalcEuler.h"
+#include "CalcRK4.h"
+#include "CalcLeapFrog.h"
 
 UI::UI(GLFWwindow* window) : window_(window) {
     InitImGui(window);
@@ -141,11 +146,24 @@ void UI::defineStyleAndUi(UiState::Parameters& params) {
 
     ImGui::Separator();
 
-    ImGui::RadioButton("Euler", (int*)&params.method, AlgorithmSelect::Method::Euler);
+    if (ImGui::RadioButton("Euler", params.method == AlgorithmSelect::Method::Euler)) {
+        params.method = AlgorithmSelect::Method::Euler;
+        CalculationHandler::getInstance().setCalculator(std::make_unique<CalcEuler>());
+    }
+
     ImGui::SameLine();
-    ImGui::RadioButton("Runge Kutta 4", (int*)&params.method, AlgorithmSelect::Method::RK4);
+
+    if (ImGui::RadioButton("Runge Kutta 4", params.method == AlgorithmSelect::Method::RK4)) {
+        params.method = AlgorithmSelect::Method::RK4;
+        CalculationHandler::getInstance().setCalculator(std::make_unique<CalcRK4>());
+    }
+
     ImGui::SameLine();
-    ImGui::RadioButton("Leapfrog", (int*)&params.method, AlgorithmSelect::Method::Leapfrog);
+
+    if (ImGui::RadioButton("Leapfrog", params.method == AlgorithmSelect::Method::Leapfrog)) {
+        params.method = AlgorithmSelect::Method::Leapfrog;
+        CalculationHandler::getInstance().setCalculator(std::make_unique<CalcLeapFrog>());
+    }
 
     ImGui::Separator();
 

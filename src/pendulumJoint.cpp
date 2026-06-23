@@ -3,14 +3,14 @@
 #include <stdexcept>
 
 pendulumJoint::pendulumJoint(double l, double m) 
-        : length_(l), mass_(m), theta_(0), omega_(0) {
+        : length_(l), mass_(m), theta_(0), omega_(0), x_(0), y_(0) {
     if (l <= 0 || m <= 0) {
         throw std::invalid_argument("Length and mass must be positive");
     }
 }
 
 pendulumJoint::pendulumJoint(double l, double m, double t, double o) 
-        : length_(l), mass_(m), theta_(t), omega_(o) {
+        : length_(l), mass_(m), theta_(t), omega_(o), x_(0), y_(0) {
     if (l <= 0 || m <= 0) {
         throw std::invalid_argument("Length and mass must be positive");
     }
@@ -28,3 +28,7 @@ void pendulumJoint::setMass(double m) {
 
 void pendulumJoint::setTheta(double t) { theta_ = t; }
 void pendulumJoint::setOmega(double o) { omega_ = o; }
+void pendulumJoint::setCartesianPosition(double x, double y) {
+    x_ = x;
+    y_ = y;
+}

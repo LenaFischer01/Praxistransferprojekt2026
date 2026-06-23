@@ -19,8 +19,8 @@ public:
 
         bool run = false;
         bool resetRequested = false;
+        AlgorithmSelect::Method method = AlgorithmSelect::Method::Leapfrog;
 
-        AlgorithmSelect::Method method = AlgorithmSelect::Method::RK4;
     };
 
     Parameters& getParams() { return params_; }
