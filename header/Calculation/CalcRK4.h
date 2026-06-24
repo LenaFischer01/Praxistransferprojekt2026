@@ -12,9 +12,9 @@ class CalcRK4 : public Calculator {
             double length2, mass2;
         };
 
-        State derivatives(const State& s, double g) {};
+        State derivatives(const State& s, double g);
 
-        void timeStep(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g){};
+        void timeStep(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g) override;
 
         std::string getName() const override {
             return "Runge Kutta 4";

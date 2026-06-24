@@ -1,4 +1,4 @@
-#include "CalcEuler.h"
+#include "Calculation/CalcEuler.h"
 
 void CalcEuler::timeStep(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g) {
             double alpha1, alpha2;

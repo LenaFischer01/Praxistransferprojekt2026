@@ -1,6 +1,24 @@
 [
 {
   "directory": "/home/lena/Code/Praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++ -I/home/lena/Code/Praxistransferprojekt2026/header -I/home/lena/Code/Praxistransferprojekt2026/external/glad/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/CalcEuler.cpp.o -c /home/lena/Code/Praxistransferprojekt2026/src/CalcEuler.cpp",
+  "file": "/home/lena/Code/Praxistransferprojekt2026/src/CalcEuler.cpp",
+  "output": "/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/app.dir/src/CalcEuler.cpp.o"
+},
+{
+  "directory": "/home/lena/Code/Praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++ -I/home/lena/Code/Praxistransferprojekt2026/header -I/home/lena/Code/Praxistransferprojekt2026/external/glad/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/CalcLeapFrog.cpp.o -c /home/lena/Code/Praxistransferprojekt2026/src/CalcLeapFrog.cpp",
+  "file": "/home/lena/Code/Praxistransferprojekt2026/src/CalcLeapFrog.cpp",
+  "output": "/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/app.dir/src/CalcLeapFrog.cpp.o"
+},
+{
+  "directory": "/home/lena/Code/Praxistransferprojekt2026/build",
+  "command": "/usr/bin/g++ -I/home/lena/Code/Praxistransferprojekt2026/header -I/home/lena/Code/Praxistransferprojekt2026/external/glad/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/CalcRK4.cpp.o -c /home/lena/Code/Praxistransferprojekt2026/src/CalcRK4.cpp",
+  "file": "/home/lena/Code/Praxistransferprojekt2026/src/CalcRK4.cpp",
+  "output": "/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/app.dir/src/CalcRK4.cpp.o"
+},
+{
+  "directory": "/home/lena/Code/Praxistransferprojekt2026/build",
   "command": "/usr/bin/g++ -I/home/lena/Code/Praxistransferprojekt2026/header -I/home/lena/Code/Praxistransferprojekt2026/external/glad/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include -I/home/lena/Code/Praxistransferprojekt2026/external/imgui/include/backends -g -std=gnu++17 -o CMakeFiles/app.dir/src/GLFWContextFactory.cpp.o -c /home/lena/Code/Praxistransferprojekt2026/src/GLFWContextFactory.cpp",
   "file": "/home/lena/Code/Praxistransferprojekt2026/src/GLFWContextFactory.cpp",
   "output": "/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/app.dir/src/GLFWContextFactory.cpp.o"

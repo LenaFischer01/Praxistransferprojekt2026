@@ -102,8 +102,8 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/pkgRedirects
 
-//Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/usr/local
+//Install prefix
+CMAKE_INSTALL_PREFIX:PATH=/home/lena/Code/Praxistransferprojekt2026/dist
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld

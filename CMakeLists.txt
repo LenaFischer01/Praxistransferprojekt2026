@@ -46,3 +46,9 @@ target_include_directories(imgui PUBLIC
 
 target_include_directories(app PRIVATE ${GLFW_INCLUDE_DIRS})
 target_link_libraries(app PRIVATE ${GLFW_LIBRARIES} GL dl pthread imgui)
+
+set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/dist" CACHE PATH "Install prefix" FORCE)
+
+install(TARGETS app DESTINATION .)
+
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/shaders" DESTINATION .)

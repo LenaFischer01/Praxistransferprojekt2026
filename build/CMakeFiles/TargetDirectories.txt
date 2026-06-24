@@ -3,3 +3,7 @@
 /home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/imgui.dir
 /home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/edit_cache.dir
 /home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/rebuild_cache.dir
+/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/list_install_components.dir
+/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/install.dir
+/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/install/local.dir
+/home/lena/Code/Praxistransferprojekt2026/build/CMakeFiles/install/strip.dir

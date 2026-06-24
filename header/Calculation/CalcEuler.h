@@ -5,7 +5,7 @@
 
 class CalcEuler : public Calculator {
     public:
-        void timeStep(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g) {};
+        void timeStep(pendulumJoint& joint1, pendulumJoint& joint2, double dt, double g) override;
 
         std::string getName() const override {
             return "Euler";
